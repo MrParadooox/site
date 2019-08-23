@@ -11,5 +11,8 @@
         public function registerAction(){
             $this->render("views/user/register.php",['layot'=>True, 'model'=>$_GET]);
         }
+        public function contactAction(){
+            $this->render("views/user/contact.php",['layot'=>True, 'model'=>$_GET]);
+        }
 
     }

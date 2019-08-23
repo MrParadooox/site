@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +8,7 @@
 	<meta name="author" content="">
 
 	<title>Home</title>
-	<link rel="stylesheet" href="http://localhost/assets/styles/style.min.css">
+	<link rel="stylesheet" href="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/styles/style.min.css">
 </head>
 
 <body>
@@ -188,7 +187,7 @@
 <div class="mobile-sticky js__menu_sticky">
 	<div class="container">
 		<div class="left-side">
-			<a href="index.html" class="logo"><img src="http://localhost/assets/images/logo.png" alt=""></a>
+			<a href="index.html" class="logo"><img src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/images/logo.png" alt=""></a>
 		</div>
 		<div class="right-side">
 			<button type="button" class="menumobile-toggle js__menu_toggle">
@@ -207,14 +206,14 @@
 				
 					<div class="drop-down-wrap drop-down-language js__mobile_drop_down">
 						<div class="drop-down-current">
-							<a href="#"><img src="http://localhost/assets/images/icon-flag-1.jpg" alt=""><span>English</span></a>
+							<a href="#"><img src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/images/icon-flag-1.jpg" alt=""><span>English</span></a>
 							<i class="fa fa-angle-down js__drop_down_button"></i>
 						</div><!--/.drop-down-current -->
 						<ul class="drop-down-list">
-							<li><a href="#"><img src="http://localhost/assets/images/icon-flag-1.jpg" alt=""><span>English</span></a></li>
-							<li><a href="#"><img src="http://localhost/assets/images/icon-flag-2.jpg" alt=""><span>French</span></a></li>
-							<li><a href="#"><img src="http://localhost/assets/images/icon-flag-3.jpg" alt=""><span>German</span></a></li>
-							<li><a href="#"><img src="http://localhost/assets/images/icon-flag-4.jpg" alt=""><span>Slovenian</span></a></li>
+							<li><a href="#"><img src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/images/icon-flag-1.jpg" alt=""><span>English</span></a></li>
+							<li><a href="#"><img src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/images/icon-flag-2.jpg" alt=""><span>French</span></a></li>
+							<li><a href="#"><img src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/images/icon-flag-3.jpg" alt=""><span>German</span></a></li>
+							<li><a href="#"><img src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/images/icon-flag-4.jpg" alt=""><span>Slovenian</span></a></li>
 						</ul><!--/.drop-down-list -->
 					</div><!--/.drop-down-wrap -->
 					
@@ -245,7 +244,7 @@
 		</div><!--/.top -->
 		<div class="container">
 			<div class="middle">
-				<a href="index.html" class="logo"><img src="http://localhost/assets/images/logo.png" alt=""></a>
+				<a href="index.html" class="logo"><img src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/images/logo.png" alt=""></a>
 				<form action="#" class="search-form">
 					<div class="select-category">
 						<select class="js__select2" data-min-results="Infinity">

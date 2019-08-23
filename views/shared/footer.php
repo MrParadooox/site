@@ -1,3 +1,18 @@
+<div class="section-common section-subscribe fixed-wrapper">
+		<div class="background js__background_image js__parallax" data-background-image="url(http://placehold.it/1920x1280"></div>
+		<div class="container">
+			<form action="#" class="subscribe-form">
+				<h2 class="section-title">Subscribe</h2>
+				<div class="clear"></div>
+				<p>Get the last news & promotion program from us</p>
+				<div class="inp-controls">
+					<input type="email" class="inp-email" placeholder="ENTER YOUR EMAIL">
+					<button type="button" class="btn-submit"><span>SUBSCRIBE</span><i class="fa fa-long-arrow-right"></i></button>
+				</div>
+			</form><!-- .subscribe-form -->
+		</div><!-- .container -->
+	</div><!-- .section-subscribe -->
+	
 <footer class="footer">
 		<div class="container">
 			<div class="top">
@@ -84,12 +99,12 @@
 					</div><!-- col -->
 					<div class="col-sm-6">
 						<ul class="payment-list">
-							<li><a href="#"><img src="http://localhost/assets/images/payment1.jpg" alt=""></a></li>
-							<li><a href="#"><img src="http://localhost/assets/images/payment2.jpg" alt=""></a></li>
-							<li><a href="#"><img src="http://localhost/assets/images/payment3.jpg" alt=""></a></li>
-							<li><a href="#"><img src="http://localhost/assets/images/payment4.jpg" alt=""></a></li>
-							<li><a href="#"><img src="http://localhost/assets/images/payment5.jpg" alt=""></a></li>
-							<li><a href="#"><img src="http://localhost/assets/images/payment6.jpg" alt=""></a></li>
+							<li><a href="#"><img src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/images/payment1.jpg" alt=""></a></li>
+							<li><a href="#"><img src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/images/payment2.jpg" alt=""></a></li>
+							<li><a href="#"><img src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/images/payment3.jpg" alt=""></a></li>
+							<li><a href="#"><img src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/images/payment4.jpg" alt=""></a></li>
+							<li><a href="#"><img src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/images/payment5.jpg" alt=""></a></li>
+							<li><a href="#"><img src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/images/payment6.jpg" alt=""></a></li>
 						</ul>
 					</div><!-- col -->
 				</div><!-- .row -->
@@ -188,41 +203,41 @@
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
-	<script src="http://localhost/assets/script/html5shiv.min.js"></script>
-	<script src="http://localhost/assets/script/respond.min.js"></script>
+	<script src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/script/html5shiv.min.js"></script>
+	<script src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/script/respond.min.js"></script>
 	<![endif]-->
 	<!-- 
 	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="http://localhost/assets/scripts/jquery.min.js"></script>
+	<script src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/scripts/jquery.min.js"></script>
 	<!-- BEGIN Revolution Slider Scripts -->
-	<script type="text/javascript" src="http://localhost/assets/plugin/rev/js/jquery.themepunch.tools.min.js"></script>
-	<script type="text/javascript" src="http://localhost/assets/plugin/rev/js/jquery.themepunch.revolution.min.js"></script>
+	<script type="text/javascript" src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/plugin/rev/js/jquery.themepunch.tools.min.js"></script>
+	<script type="text/javascript" src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/plugin/rev/js/jquery.themepunch.revolution.min.js"></script>
 	<!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
 
-	<script type="text/javascript" src="http://localhost/assets/plugin/rev/js/extensions/revolution.extension.actions.min.js"></script>
-	<script type="text/javascript" src="http://localhost/assets/plugin/rev/js/extensions/revolution.extension.carousel.min.js"></script>
-	<script type="text/javascript" src="http://localhost/assets/plugin/rev/js/extensions/revolution.extension.kenburn.min.js"></script>
-	<script type="text/javascript" src="http://localhost/assets/plugin/rev/js/extensions/revolution.extension.layeranimation.min.js"></script>
-	<script type="text/javascript" src="http://localhost/assets/plugin/rev/js/extensions/revolution.extension.migration.min.js"></script>
-	<script type="text/javascript" src="http://localhost/assets/plugin/rev/js/extensions/revolution.extension.navigation.min.js"></script>
-	<script type="text/javascript" src="http://localhost/assets/plugin/rev/js/extensions/revolution.extension.parallax.min.js"></script>
-	<script type="text/javascript" src="http://localhost/assets/plugin/rev/js/extensions/revolution.extension.slideanims.min.js"></script>
-	<script type="text/javascript" src="http://localhost/assets/plugin/rev/js/extensions/revolution.extension.video.min.js"></script>
+	<script type="text/javascript" src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/plugin/rev/js/extensions/revolution.extension.actions.min.js"></script>
+	<script type="text/javascript" src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/plugin/rev/js/extensions/revolution.extension.carousel.min.js"></script>
+	<script type="text/javascript" src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/plugin/rev/js/extensions/revolution.extension.kenburn.min.js"></script>
+	<script type="text/javascript" src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/plugin/rev/js/extensions/revolution.extension.layeranimation.min.js"></script>
+	<script type="text/javascript" src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/plugin/rev/js/extensions/revolution.extension.migration.min.js"></script>
+	<script type="text/javascript" src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/plugin/rev/js/extensions/revolution.extension.navigation.min.js"></script>
+	<script type="text/javascript" src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/plugin/rev/js/extensions/revolution.extension.parallax.min.js"></script>
+	<script type="text/javascript" src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/plugin/rev/js/extensions/revolution.extension.slideanims.min.js"></script>
+	<script type="text/javascript" src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/plugin/rev/js/extensions/revolution.extension.video.min.js"></script>
 	
 	<!-- END Revolution Slider Scripts -->
-	<script src="http://localhost/assets/scripts/jquery.inview.min.js"></script>
-	<script src="http://localhost/assets/scripts/modernizr.min.js"></script>
-	<script src="http://localhost/assets/scripts/jquery.scrollTo.min.js"></script>
-	<script src="http://localhost/assets/plugin/select2/js/select2.min.js"></script>
-	<script src="http://localhost/assets/scripts/isotope.pkgd.min.js"></script>
-	<script src="http://localhost/assets/scripts/cells-by-row.min.js"></script>
-	<script src="http://localhost/assets/scripts/packery-mode.pkgd.min.js"></script>
-	<script src="http://localhost/assets/plugin/slick/slick.min.js"></script>
-	<script src="http://localhost/assets/scripts/jquery.parallax-1.1.3.min.js"></script>
-	<script src="http://localhost/assets/scripts/nouislider.min.js"></script>
+	<script src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/scripts/jquery.inview.min.js"></script>
+	<script src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/scripts/modernizr.min.js"></script>
+	<script src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/scripts/jquery.scrollTo.min.js"></script>
+	<script src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/plugin/select2/js/select2.min.js"></script>
+	<script src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/scripts/isotope.pkgd.min.js"></script>
+	<script src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/scripts/cells-by-row.min.js"></script>
+	<script src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/scripts/packery-mode.pkgd.min.js"></script>
+	<script src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/plugin/slick/slick.min.js"></script>
+	<script src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/scripts/jquery.parallax-1.1.3.min.js"></script>
+	<script src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/scripts/nouislider.min.js"></script>
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD84ST3FIRNNVS1CEm_IE9KoR-lAIw8OPo" type="text/javascript"></script>
-	<script src="http://localhost/assets/scripts/main.min.js"></script>
-	<script type="text/javascript" src="http://localhost/assets/plugin/rev/js/jquery.revolution.min.js"></script>
+	<script src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/scripts/main.min.js"></script>
+	<script type="text/javascript" src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/plugin/rev/js/jquery.revolution.min.js"></script>
 </body>
 </html>
