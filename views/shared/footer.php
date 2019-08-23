@@ -1,0 +1,228 @@
+<footer class="footer">
+		<div class="container">
+			<div class="top">
+				<div class="row">
+					<div class="col-md-2 col-sm-4">
+						<div class="widget widget_nav_menu">
+							<h3 class="title">Help</h3>
+							<ul class="menu">
+								<li><a href="#">Track order</a></li>
+								<li><a href="#">FAQs</a></li>
+								<li><a href="#">Privacy policy</a></li>
+								<li><a href="#">Terms & Conditions</a></li>
+								<li><a href="#">Refunds</a></li>
+								<li><a href="#">Support Online</a></li>
+							</ul>
+						</div>
+					</div><!-- col -->
+					<div class="col-md-2 col-sm-4">
+						<div class="widget widget_nav_menu">
+							<h3 class="title">Account</h3>
+							<ul class="menu">
+								<li><a href="#">My account</a></li>
+								<li><a href="#">Wishlist</a></li>
+								<li><a href="#">Order history</a></li>
+								<li><a href="#">My Favorites</a></li>
+								<li><a href="#">Gift Vouchers</a></li>
+								<li><a href="#">Specials</a></li>
+							</ul>
+						</div>
+					</div><!-- col -->
+					<div class="col-md-2 col-sm-4">
+						<div class="widget widget_nav_menu">
+							<h3 class="title">Quick Links</h3>
+							<ul class="menu">
+								<li><a href="#">Best Sellers</a></li>
+								<li><a href="#">Featured Products</a></li>
+								<li><a href="#">Hot Products</a></li>
+								<li><a href="#">Top Rated</a></li>
+								<li><a href="#">Blog</a></li>
+								<li><a href="#">Contact Us</a></li>
+							</ul>
+						</div>
+					</div><!-- col -->
+					<div class="col-md-3 col-sm-6">
+						<div class="widget widget_text">
+							<h3 class="title">Contact Us</h3>
+							<p>Please feed free to contact us if you have any question.</p>
+							<ul class="contact-list">
+								<li><a href="mailto:sale@amaza.com"><i class="fa fa-envelope-o"></i>sale@amaza.com</a></li>
+								<li><a href="tel:064888999123"><i class="fa fa-phone"></i>+64 888 999 123</a></li>
+								<li><i class="fa fa-map-marker"></i>22 Baywater Dr, Wentworth Point<br>Australia, WP 2127</li>
+							</ul>
+						</div>
+					</div><!-- col -->
+					<div class="col-md-3 col-sm-6">
+						<div class="widget widget_subscribe">
+							<h3 class="title">Newsletter Signup</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+							<form action="#" class="join-form">
+								<div class="form-controls">
+									<input type="email" placeholder="Enter your email" class="inp-email">
+									<input type="submit" value="Join" class="inp-submit">
+									<i>We respect your privac</i>
+								</div>
+							</form>
+							<ul class="social-list">
+								<li><a href="#" class="fa fa-twitter"></a></li>
+								<li><a href="#" class="fa fa-facebook"></a></li>
+								<li><a href="#" class="fa fa-google-plus"></a></li>
+								<li><a href="#" class="fa fa-linkedin"></a></li>
+								<li><a href="#" class="fa fa-vimeo"></a></li>
+								<li><a href="#" class="fa fa-pinterest-p"></a></li>
+							</ul>
+						</div>
+					</div><!-- col -->
+				</div><!-- .row -->
+			</div><!-- .top -->
+		</div><!-- .container -->
+		<div class="bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="copyright">Made with love <i class="fa fa-heart"></i> 2016 <a href="#">Amaza.</a> Designed by <a href="#">NinjaTeam</a></div>
+					</div><!-- col -->
+					<div class="col-sm-6">
+						<ul class="payment-list">
+							<li><a href="#"><img src="http://localhost/assets/images/payment1.jpg" alt=""></a></li>
+							<li><a href="#"><img src="http://localhost/assets/images/payment2.jpg" alt=""></a></li>
+							<li><a href="#"><img src="http://localhost/assets/images/payment3.jpg" alt=""></a></li>
+							<li><a href="#"><img src="http://localhost/assets/images/payment4.jpg" alt=""></a></li>
+							<li><a href="#"><img src="http://localhost/assets/images/payment5.jpg" alt=""></a></li>
+							<li><a href="#"><img src="http://localhost/assets/images/payment6.jpg" alt=""></a></li>
+						</ul>
+					</div><!-- col -->
+				</div><!-- .row -->
+			</div><!-- .container -->
+		</div><!-- .bottom -->
+	</footer><!--/.footer -->
+</div><!--/#wrapper -->
+
+<div id="quickViewPopup" class="popup js__popup">
+	<div class="popup-overlay js__popup_close"></div>
+	<div class="popup-body">
+		<button type="button" class="popup-close-btn js__popup_close"><i class="fa fa-times"></i></button>
+		<div class="container">
+			<div class="popup-inside">
+				<div class="row">
+					<div class="col-md-12 clearfix">
+						<h2 class="single-title-border-bottom">Quick view</h2>
+					</div><!-- col -->
+					<div class="col-md-5">
+						<div class="product-detail">
+							<div class="product">
+								<div class="images js__gallery">
+									<a href="#" class="woocommerce-main-image zoom js__zoom_popup" data-target="#zoomPopup" data-zoom="http://placehold.it/385x530">
+										<img src="http://placehold.it/327x452" alt="" />
+									</a><!-- .woocommerce-main-image -->
+									<div class="thumbnails">
+										<a href="#" class="zoom js__thumb" data-images="http://placehold.it/327x452" data-zoom="http://placehold.it/495x610" ><img src="http://placehold.it/76x97" alt="" /></a>
+										<a href="#" class="zoom js__thumb" data-images="http://placehold.it/327x452" data-zoom="http://placehold.it/470x640" ><img src="http://placehold.it/76x97" alt="" /></a>
+										<a href="#" class="zoom js__thumb js__active" data-images="http://placehold.it/327x452" data-zoom="http://placehold.it/385x530" ><img src="http://placehold.it/76x97" alt="" /></a>
+										<a href="#" class="zoom js__thumb" data-images="http://placehold.it/327x452" data-zoom="http://placehold.it/448x427" ><img src="http://placehold.it/76x97" alt="" /></a>
+									</div><!-- .thumbnails -->
+									<div class="hidden">
+										<img src="http://placehold.it/327x452" alt="" />
+										<img src="http://placehold.it/327x452" alt="" />
+										<img src="http://placehold.it/327x452" alt="" />
+										<img src="http://placehold.it/327x452" alt="" />
+									</div><!-- load images zone -->
+								</div><!-- .images -->
+							</div><!-- .product -->
+						</div><!-- .product-detail -->
+					</div><!-- col -->
+					<div class="col-md-7">
+						<div class="summary">
+							<h2 class="product_title">Adios Fashion Girl</h2>
+							<div class="summary-top">
+								<div class="star-rating">
+									<span class="js__width" data-width="80%"><strong class="rating">4.00</strong> out of 5</span>
+								</div>
+								<a href="#">Have 25 reviews</a> <span>/</span> <a href="#">Add your review</a>
+							</div>
+							<p class="price"><span class="amount">$49</span></p>
+							<ul class="product_meta">
+								<li><span>Brand:</span> Louis Vuitton</li>
+								<li><span>Available:</span> In stock</li>
+								<li><span>Product code:</span> ABC 123 456</li>
+							</ul>
+							<div class="description">
+								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismo tincidunt ut laoreet dolore magna aliquam erat volutpat, feugiat nulla facilisis vero eros accumsan et iusto.</p>
+							</div>
+							<ul class="variants">
+								<li class="variant-size">
+									<span class="text">Size</span>
+									<label class="lbl-variant"><input type="radio" name="radio-size" class="lbl-radio"><span class="lbl-text">S</span></label>
+									<label class="lbl-variant"><input checked type="radio" name="radio-size" class="lbl-radio"><span class="lbl-text">M</span></label>
+									<label class="lbl-variant"><input type="radio" name="radio-size" class="lbl-radio"><span class="lbl-text">L</span></label>
+								</li>
+								<li class="variant-color">
+									<span class="text">Colors</span>
+									<label class="lbl-variant"><input type="radio" name="radio-color" class="lbl-radio"><span class="lbl-text js__background_color" data-background-color="#fea500"></span></label>
+									<label class="lbl-variant"><input type="radio" name="radio-color" class="lbl-radio"><span class="lbl-text js__background_color" data-background-color="#9fbedb"></span></label>
+									<label class="lbl-variant"><input type="radio" name="radio-color" class="lbl-radio"><span class="lbl-text js__background_color" data-background-color="#f3db06"></span></label>
+									<label class="lbl-variant"><input type="radio" name="radio-color" class="lbl-radio"><span class="lbl-text js__background_color" data-background-color="#00b261"></span></label>
+								</li>
+							</ul>
+							<form class="cart">
+								<div class="quantity js__number"><input type="number" class="js__target" value="1" /><button type="button" class="js__plus fa-plus fa"></button><button type="button" class="js__minus fa-minus fa"></button></div>
+								<button type="submit" class="single_add_to_cart_button">Add to cart</button>
+							</form>
+						</div><!-- .summary -->
+					</div><!-- col -->
+				</div><!-- .row -->
+			</div><!-- .popup-inside -->
+		</div><!-- .container -->
+	</div><!-- .popup-body -->
+</div><!-- #quickViewPopup -->
+
+<div id="zoomPopup" class="popup popup-images js__popup">
+	<div class="popup-overlay js__popup_close"></div>
+	<div class="popup-body">
+		<button type="button" class="popup-close-btn js__popup_close"><i class="fa fa-times"></i></button>
+		<div class="popup-inside js__popup_images">
+				
+		</div><!-- .popup-inside -->
+	</div><!-- .popup-body -->
+</div><!-- #zoomPopup -->
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="http://localhost/assets/script/html5shiv.min.js"></script>
+	<script src="http://localhost/assets/script/respond.min.js"></script>
+	<![endif]-->
+	<!-- 
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="http://localhost/assets/scripts/jquery.min.js"></script>
+	<!-- BEGIN Revolution Slider Scripts -->
+	<script type="text/javascript" src="http://localhost/assets/plugin/rev/js/jquery.themepunch.tools.min.js"></script>
+	<script type="text/javascript" src="http://localhost/assets/plugin/rev/js/jquery.themepunch.revolution.min.js"></script>
+	<!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+
+	<script type="text/javascript" src="http://localhost/assets/plugin/rev/js/extensions/revolution.extension.actions.min.js"></script>
+	<script type="text/javascript" src="http://localhost/assets/plugin/rev/js/extensions/revolution.extension.carousel.min.js"></script>
+	<script type="text/javascript" src="http://localhost/assets/plugin/rev/js/extensions/revolution.extension.kenburn.min.js"></script>
+	<script type="text/javascript" src="http://localhost/assets/plugin/rev/js/extensions/revolution.extension.layeranimation.min.js"></script>
+	<script type="text/javascript" src="http://localhost/assets/plugin/rev/js/extensions/revolution.extension.migration.min.js"></script>
+	<script type="text/javascript" src="http://localhost/assets/plugin/rev/js/extensions/revolution.extension.navigation.min.js"></script>
+	<script type="text/javascript" src="http://localhost/assets/plugin/rev/js/extensions/revolution.extension.parallax.min.js"></script>
+	<script type="text/javascript" src="http://localhost/assets/plugin/rev/js/extensions/revolution.extension.slideanims.min.js"></script>
+	<script type="text/javascript" src="http://localhost/assets/plugin/rev/js/extensions/revolution.extension.video.min.js"></script>
+	
+	<!-- END Revolution Slider Scripts -->
+	<script src="http://localhost/assets/scripts/jquery.inview.min.js"></script>
+	<script src="http://localhost/assets/scripts/modernizr.min.js"></script>
+	<script src="http://localhost/assets/scripts/jquery.scrollTo.min.js"></script>
+	<script src="http://localhost/assets/plugin/select2/js/select2.min.js"></script>
+	<script src="http://localhost/assets/scripts/isotope.pkgd.min.js"></script>
+	<script src="http://localhost/assets/scripts/cells-by-row.min.js"></script>
+	<script src="http://localhost/assets/scripts/packery-mode.pkgd.min.js"></script>
+	<script src="http://localhost/assets/plugin/slick/slick.min.js"></script>
+	<script src="http://localhost/assets/scripts/jquery.parallax-1.1.3.min.js"></script>
+	<script src="http://localhost/assets/scripts/nouislider.min.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD84ST3FIRNNVS1CEm_IE9KoR-lAIw8OPo" type="text/javascript"></script>
+	<script src="http://localhost/assets/scripts/main.min.js"></script>
+	<script type="text/javascript" src="http://localhost/assets/plugin/rev/js/jquery.revolution.min.js"></script>
+</body>
+</html>
