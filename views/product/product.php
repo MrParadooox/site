@@ -1,3 +1,7 @@
+<?php
+var_dump($model);
+var_dump($row);
+?>
 <div class="page-large-title">
 		<div class="container">
 			<h1 class="title">Adios Fashion Girl</h1>
