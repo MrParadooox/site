@@ -1,7 +1,14 @@
 <?php
 var_dump($model);
-var_dump($row);
+
+var_dump($get['id']);
 ?>
+					<?php
+					foreach($model as $m){
+						var_dump($m->Name);
+					}
+					?>
+
 <div class="page-large-title">
 		<div class="container">
 			<h1 class="title">Adios Fashion Girl</h1>
@@ -38,6 +45,8 @@ var_dump($row);
 							</div><!-- .product -->
 						</div><!-- .product-detail -->
 					</div><!-- col -->
+
+
 					<div class="col-md-6">
 						<div class="summary summary-single">
 							<h2 class="product_title">Adios Fashion Girl</h2>

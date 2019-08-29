@@ -5,12 +5,34 @@
 
     class productController extends baseController {
 
-        public function productAction(){
-            $this->render("views/product/product.php", ['layot'=>True, 'model'=>$_GET]);
+        //  select All
+        public function indexAction(){
+            if ($_SERVER["REQUEST_METHOD"]=="GET")
+            {
+                // $this->render("views/product/product.php", ['layot'=>True, 'model'=>$_GET]);
+                $model= productModel::selectAll();
+                $modelPhoto=productModel::getFhoto($model);
+                $this->render("views/product/category.php", ['layot'=>True, 'model'=>$model, 'modelPhoto'=>$modelPhoto]);
+            }
+            
         }
-        public function categoryAction(){
-            $this->render("views/product/category.php", ['layot'=>True, 'model'=>$_GET]);
+        public function productAction(){
+            $model= productModel::selectById($_GET);
+            $modelPhoto=productModel::getFhoto($model);
+            $this->render("views/product/product.php", ['layot'=>True, 'model'=>$model, 'get'=>$_GET, 'modelPhoto'=>$modelPhoto]);
+        }
+        public function selectIdyAction(){
+            // $this->render("views/product/product.php", ['layot'=>True, 'model'=>$_GET]);
+        }
+
+
+
+        public function editAction(){
+            // $this->render("views/product/category.php", ['layot'=>True, 'model'=>$_GET]);
         }
         
+        public function deleteAction(){
+            // $this->render("views/product/category.php", ['layot'=>True, 'model'=>$_GET]);
+        }
 
     }

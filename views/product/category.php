@@ -116,10 +116,22 @@
 					</ul><!-- .shop-type -->
 				</div><!-- .shop-filter -->
 				<div class="products row row-inline-block text-center">
+
+										<?php
+										foreach ($model as $m) {
+											?>
 					<div class="col-md-4 col-sm-6 col-ip-6 col-xs-12">
 						<div class="product-grid">
 							<div class="thumb">
-								<a href="#"><img src="http://placehold.it/270x350" alt="">
+											<?php
+												foreach($modelPhoto as $photo ){
+													if (($photo['productId'] == $m->id) && ($photo['position']==0)){
+												?>
+								<a href="#"><img src="<?=$photo['url'] ?>" alt="">
+								<?php
+											}
+												}
+												?>
 									<ul class="attribute-list">
 										<li><span class="label-coral">New</span></li>
 										<li><span class="label-red">Sale</span></li>
@@ -133,11 +145,10 @@
 								<a href="#" class="add_to_cart_button">Add to cart</a>
 							</div>
 							<a href="#" class="content">
-								<h2 class="title">Gray T-shirt Summer</h2>
+								<h2 class="title"><?=$m->Name?></h2>
 								<span class="category">Men</span>
 								<span class="price">
-									<del><span class="amount">$40.00</span></del>
-									<ins><span class="amount">$25.00</span></ins>
+								<span class="amount"><?=$m->id?></span>
 								</span>
 								<div class="star-rating">
 									<span class="js__width" data-width="80%"><strong class="rating">4.00</strong> out of 5</span>
@@ -145,278 +156,11 @@
 							</a>
 						</div>
 					</div><!-- product -->
-					<div class="col-md-4 col-sm-6 col-ip-6 col-xs-12">
-						<div class="product-grid">
-							<div class="thumb">
-								<a href="#"><img src="http://placehold.it/270x350" alt="">
-									<ul class="attribute-list">
-										<li><span class="label-coral">New</span></li>
-									</ul>
-								</a>
-								<ul class="controls">
-									<li><a href="#"><i class="fa fa-heart"></i><span>LIKE IT</span></a></li>
-									<li><a href="#"><i class="fa fa-exchange"></i><span>COMPARE</span></a></li>
-									<li><a href="#" class="js__popup_open" data-target="#quickViewPopup"><i class="fa fa-arrows-alt"></i><span>QUICK VIEW</span></a></li>
-								</ul>
-								<a href="#" class="add_to_cart_button">Add to cart</a>
-							</div>
-							<a href="#" class="content">
-								<h2 class="title">T-shirt Summer</h2>
-								<span class="category">Women</span>
-								<span class="price">
-									<span class="amount">$50.95</span>
-								</span>
-								<div class="star-rating">
-									<span class="js__width" data-width="80%"><strong class="rating">4.00</strong> out of 5</span>
-								</div>
-							</a>
-						</div>
-					</div><!-- product -->
-					<div class="col-md-4 col-sm-6 col-ip-6 col-xs-12">
-						<div class="product-grid">
-							<div class="thumb">
-								<a href="#"><img src="http://placehold.it/270x350" alt="">
-								</a>
-								<ul class="controls">
-									<li><a href="#"><i class="fa fa-heart"></i><span>LIKE IT</span></a></li>
-									<li><a href="#"><i class="fa fa-exchange"></i><span>COMPARE</span></a></li>
-									<li><a href="#" class="js__popup_open" data-target="#quickViewPopup"><i class="fa fa-arrows-alt"></i><span>QUICK VIEW</span></a></li>
-								</ul>
-								<a href="#" class="add_to_cart_button">Add to cart</a>
-							</div>
-							<a href="#" class="content">
-								<h2 class="title">Red Long-Sleeved Shirt</h2>
-								<span class="category">Women</span>
-								<span class="price">
-									<span class="amount">$35.30</span>
-								</span>
-							</a>
-						</div>
-					</div><!-- product -->
-					<div class="col-md-4 col-sm-6 col-ip-6 col-xs-12">
-						<div class="product-grid">
-							<div class="thumb">
-								<a href="#"><img src="http://placehold.it/270x350" alt="">
-								</a>
-								<ul class="controls">
-									<li><a href="#"><i class="fa fa-heart"></i><span>LIKE IT</span></a></li>
-									<li><a href="#"><i class="fa fa-exchange"></i><span>COMPARE</span></a></li>
-									<li><a href="#" class="js__popup_open" data-target="#quickViewPopup"><i class="fa fa-arrows-alt"></i><span>QUICK VIEW</span></a></li>
-								</ul>
-								<a href="#" class="add_to_cart_button">Add to cart</a>
-							</div>
-							<a href="#" class="content">
-								<h2 class="title">Black T-shirt Summer</h2>
-								<span class="category">Kid</span>
-								<span class="price">
-									<span class="amount">$30.00</span>
-								</span>
-								<div class="star-rating">
-									<span class="js__width" data-width="100%"><strong class="rating">5.00</strong> out of 5</span>
-								</div>
-							</a>
-						</div>
-					</div><!-- product -->
-					<div class="col-md-4 col-sm-6 col-ip-6 col-xs-12">
-						<div class="product-grid">
-							<div class="thumb">
-								<a href="#"><img src="http://placehold.it/270x350" alt="">
-									<ul class="attribute-list">
-										<li><span class="label-coral">New</span></li>
-									</ul>
-								</a>
-								<ul class="controls">
-									<li><a href="#"><i class="fa fa-heart"></i><span>LIKE IT</span></a></li>
-									<li><a href="#"><i class="fa fa-exchange"></i><span>COMPARE</span></a></li>
-									<li><a href="#" class="js__popup_open" data-target="#quickViewPopup"><i class="fa fa-arrows-alt"></i><span>QUICK VIEW</span></a></li>
-								</ul>
-								<a href="#" class="add_to_cart_button">Add to cart</a>
-							</div>
-							<a href="#" class="content">
-								<h2 class="title">White Long-Sleeve Shirt</h2>
-								<span class="category">Men</span>
-								<span class="price">
-									<span class="amount">$23.00</span>
-								</span>
-							</a>
-						</div>
-					</div><!-- product -->
-					<div class="col-md-4 col-sm-6 col-ip-6 col-xs-12">
-						<div class="product-grid">
-							<div class="thumb">
-								<a href="#"><img src="http://placehold.it/270x350" alt="">
-								</a>
-								<ul class="controls">
-									<li><a href="#"><i class="fa fa-heart"></i><span>LIKE IT</span></a></li>
-									<li><a href="#"><i class="fa fa-exchange"></i><span>COMPARE</span></a></li>
-									<li><a href="#" class="js__popup_open" data-target="#quickViewPopup"><i class="fa fa-arrows-alt"></i><span>QUICK VIEW</span></a></li>
-								</ul>
-								<a href="#" class="add_to_cart_button">Add to cart</a>
-							</div>
-							<a href="#" class="content">
-								<h2 class="title">Gray T-shirt</h2>
-								<span class="category">Women</span>
-								<span class="price">
-									<span class="amount">$48.35</span>
-								</span>
-							</a>
-						</div>
-					</div><!-- product -->
-					<div class="col-md-4 col-sm-6 col-ip-6 col-xs-12">
-						<div class="product-grid">
-							<div class="thumb">
-								<a href="#"><img src="http://placehold.it/270x350" alt="">
-								</a>
-								<ul class="controls">
-									<li><a href="#"><i class="fa fa-heart"></i><span>LIKE IT</span></a></li>
-									<li><a href="#"><i class="fa fa-exchange"></i><span>COMPARE</span></a></li>
-									<li><a href="#" class="js__popup_open" data-target="#quickViewPopup"><i class="fa fa-arrows-alt"></i><span>QUICK VIEW</span></a></li>
-								</ul>
-								<a href="#" class="add_to_cart_button">Add to cart</a>
-							</div>
-							<a href="#" class="content">
-								<h2 class="title">Red T-shirt Summer</h2>
-								<span class="category">Men</span>
-								<span class="price">
-									<del><span class="amount">$40.00</span></del>
-									<ins><span class="amount">$25.00</span></ins>
-								</span>
-								<div class="star-rating">
-									<span class="js__width" data-width="80%"><strong class="rating">4.00</strong> out of 5</span>
-								</div>
-							</a>
-						</div>
-					</div><!-- product -->
-					<div class="col-md-4 col-sm-6 col-ip-6 col-xs-12">
-						<div class="product-grid">
-							<div class="thumb">
-								<a href="#"><img src="http://placehold.it/270x350" alt="">
-									<ul class="attribute-list">
-										<li><span class="label-coral">New</span></li>
-									</ul>
-								</a>
-								<ul class="controls">
-									<li><a href="#"><i class="fa fa-heart"></i><span>LIKE IT</span></a></li>
-									<li><a href="#"><i class="fa fa-exchange"></i><span>COMPARE</span></a></li>
-									<li><a href="#" class="js__popup_open" data-target="#quickViewPopup"><i class="fa fa-arrows-alt"></i><span>QUICK VIEW</span></a></li>
-								</ul>
-								<a href="#" class="add_to_cart_button">Add to cart</a>
-							</div>
-							<a href="#" class="content">
-								<h2 class="title">T-shirt Summer</h2>
-								<span class="category">Women</span>
-								<span class="price">
-									<span class="amount">$50.95</span>
-								</span>
-								<div class="star-rating">
-									<span class="js__width" data-width="80%"><strong class="rating">4.00</strong> out of 5</span>
-								</div>
-							</a>
-						</div>
-					</div><!-- product -->
-					<div class="col-md-4 col-sm-6 col-ip-6 col-xs-12">
-						<div class="product-grid">
-							<div class="thumb">
-								<a href="#"><img src="http://placehold.it/270x350" alt="">
-								</a>
-								<ul class="controls">
-									<li><a href="#"><i class="fa fa-heart"></i><span>LIKE IT</span></a></li>
-									<li><a href="#"><i class="fa fa-exchange"></i><span>COMPARE</span></a></li>
-									<li><a href="#" class="js__popup_open" data-target="#quickViewPopup"><i class="fa fa-arrows-alt"></i><span>QUICK VIEW</span></a></li>
-								</ul>
-								<a href="#" class="add_to_cart_button">Add to cart</a>
-							</div>
-							<a href="#" class="content">
-								<h2 class="title">White Long-Sleeve Shirt</h2>
-								<span class="category">Women</span>
-								<span class="price">
-									<span class="amount">$35.30</span>
-								</span>
-								<div class="star-rating">
-									<span class="js__width" data-width="100%"><strong class="rating">5.00</strong> out of 5</span>
-								</div>
-							</a>
-						</div>
-					</div><!-- product -->
-					<div class="col-md-4 col-sm-6 col-ip-6 col-xs-12">
-						<div class="product-grid">
-							<div class="thumb">
-								<a href="#"><img src="http://placehold.it/270x350" alt="">
-									<ul class="attribute-list">
-										<li><span class="label-coral">New</span></li>
-									</ul>
-								</a>
-								<ul class="controls">
-									<li><a href="#"><i class="fa fa-heart"></i><span>LIKE IT</span></a></li>
-									<li><a href="#"><i class="fa fa-exchange"></i><span>COMPARE</span></a></li>
-									<li><a href="#" class="js__popup_open" data-target="#quickViewPopup"><i class="fa fa-arrows-alt"></i><span>QUICK VIEW</span></a></li>
-								</ul>
-								<a href="#" class="add_to_cart_button">Add to cart</a>
-							</div>
-							<a href="#" class="content">
-								<h2 class="title">Black T-shirt Summer</h2>
-								<span class="category">Women</span>
-								<span class="price">
-									<span class="amount">$30.00</span>
-								</span>
-								<div class="star-rating">
-									<span class="js__width" data-width="80%"><strong class="rating">4.00</strong> out of 5</span>
-								</div>
-							</a>
-						</div>
-					</div><!-- product -->
-					<div class="col-md-4 col-sm-6 col-ip-6 col-xs-12">
-						<div class="product-grid">
-							<div class="thumb">
-								<a href="#"><img src="http://placehold.it/270x350" alt="">
-									<ul class="attribute-list">
-										<li><span class="label-red">Sale</span></li>
-									</ul>
-								</a>
-								<ul class="controls">
-									<li><a href="#"><i class="fa fa-heart"></i><span>LIKE IT</span></a></li>
-									<li><a href="#"><i class="fa fa-exchange"></i><span>COMPARE</span></a></li>
-									<li><a href="#" class="js__popup_open" data-target="#quickViewPopup"><i class="fa fa-arrows-alt"></i><span>QUICK VIEW</span></a></li>
-								</ul>
-								<a href="#" class="add_to_cart_button">Add to cart</a>
-							</div>
-							<a href="#" class="content">
-								<h2 class="title">White Long-Sleeve Shirt</h2>
-								<span class="category">Women</span>
-								<span class="price">
-									<span class="amount">$23.00</span>
-								</span>
-							</a>
-						</div>
-					</div><!-- product -->
-					<div class="col-md-4 col-sm-6 col-ip-6 col-xs-12">
-						<div class="product-grid">
-							<div class="thumb">
-								<a href="#"><img src="http://placehold.it/270x350" alt="">
-									<ul class="attribute-list">
-										<li><span class="label-coral">New</span></li>
-										<li><span class="label-red">Sale</span></li>
-									</ul>
-								</a>
-								<ul class="controls">
-									<li><a href="#"><i class="fa fa-heart"></i><span>LIKE IT</span></a></li>
-									<li><a href="#"><i class="fa fa-exchange"></i><span>COMPARE</span></a></li>
-									<li><a href="#" class="js__popup_open" data-target="#quickViewPopup"><i class="fa fa-arrows-alt"></i><span>QUICK VIEW</span></a></li>
-								</ul>
-								<a href="#" class="add_to_cart_button">Add to cart</a>
-							</div>
-							<a href="#" class="content">
-								<h2 class="title">Gray T-shirt</h2>
-								<span class="category">Women</span>
-								<span class="price">
-									<span class="amount">$48.35</span>
-								</span>
-								<div class="star-rating">
-									<span class="js__width" data-width="80%"><strong class="rating">4.00</strong> out of 5</span>
-								</div>
-							</a>
-						</div>
-					</div><!-- product -->
+					<?php
+							}
+						?>
+
+					
 				</div><!-- products -->
 				<a href="#" class="btn-ajax-loading"><i class="fa fa-refresh"></i> <span>View more (2.450 products) ...</span></a>
 			</div><!-- col -->
