@@ -93,9 +93,33 @@
                 $conn=null;
                 return $fhotoArray;
             }
+        }
 
 
-
+        public static function categorryAll(){
+            try
+            {
+                $conn = new PDO("mysql:host=".self::ServerName.";dbname=".self::DBName, self::UserName, self::Password);
+                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                $stmt = $conn->prepare("SELECT * FROM `category`");
+                $stmt->execute();
+                $tovarArray=[];
+                foreach ($stmt as $row)
+                {
+                    $tovar = new productModel;
+                    $tovar->tryMap($row);
+                    array_push ($tovarArray, $tovar);
+                }
+            }
+            catch(PDOException $e)
+            {
+            echo "Connection failed: " . $e->getMessage();
+            }
+            finally {
+                $conn=null;
+                
+                return $tovarArray;
+            }
         }
 
 

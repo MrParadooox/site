@@ -1,11 +1,6 @@
-<?php
-var_dump($model);
 
-var_dump($get['id']);
-?>
 					<?php
 					foreach($model as $m){
-						var_dump($m->Name);
 					}
 					?>
 
@@ -27,13 +22,23 @@ var_dump($get['id']);
 							<div class="product">
 								<div class="images js__gallery">
 									<a href="#" class="woocommerce-main-image zoom js__zoom_popup" data-target="#zoomPopup" data-zoom="http://placehold.it/385x530">
-										<img src="http://placehold.it/435x590" alt="" />
+									<?php
+									foreach($modelPhoto as $photo ){
+										if($photo['position']==0){
+											?>
+										<img src="<?=$photo['url']?>" alt="" />
 									</a><!-- .woocommerce-main-image -->
 									<div class="thumbnails">
-										<a href="#" class="zoom js__thumb" data-images="http://placehold.it/435x590" data-zoom="http://placehold.it/495x610" ><img src="http://placehold.it/100x132" alt="" /></a>
-										<a href="#" class="zoom js__thumb" data-images="http://placehold.it/435x590" data-zoom="http://placehold.it/470x640" ><img src="http://placehold.it/100x132" alt="" /></a>
-										<a href="#" class="zoom js__thumb js__active" data-images="http://placehold.it/435x590" data-zoom="http://placehold.it/385x530" ><img src="http://placehold.it/100x132" alt="" /></a>
-										<a href="#" class="zoom js__thumb" data-images="http://placehold.it/435x590" data-zoom="http://placehold.it/448x427" ><img src="http://placehold.it/100x132" alt="" /></a>
+									<a href="#" class="zoom js__thumb" data-images="<?=$photo['url']?>" data-zoom="<?=$photo['url']?>" ><img src="<?=$photo['url']?>" alt="" /></a>
+										<?php
+								} else {
+									?>
+										<a href="#" class="zoom js__thumb" data-images="<?=$photo['url']?>" data-zoom="<?=$photo['url']?>" ><img src="<?=$photo['url']?>" alt="" /></a>
+									<?php
+											}
+										
+										}
+										?>
 									</div><!-- .thumbnails -->
 									<div class="hidden">
 										<img src="http://placehold.it/435x590" alt="" />
@@ -56,14 +61,14 @@ var_dump($get['id']);
 								</div>
 								<a href="#">Have 25 reviews</a> <span>/</span> <a href="#">Add your review</a>
 							</div>
-							<p class="price"><span class="amount">$49</span></p>
+							<p class="price"><span class="amount">$<?=$m->price?></span></p>
 							<ul class="product_meta">
-								<li><span>Brand:</span> Louis Vuitton</li>
+								<li><span>Brand:</span> <?=$m->price?></li>
 								<li><span>Available:</span> In stock</li>
 								<li><span>Product code:</span> ABC 123 456</li>
 							</ul>
 							<div class="description">
-								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismo tincidunt ut laoreet dolore magna aliquam erat volutpat, feugiat nulla facilisis vero eros accumsan et iusto.</p>
+								<p><?=$m->smallDesc?></p>
 							</div>
 							<ul class="variants">
 								<li class="variant-size">
@@ -99,7 +104,7 @@ var_dump($get['id']);
 							</ul>
 							<div class="panel entry-content js__tab_content js__active">
 								<div class="text-content">
-									<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at qui vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi et. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla.</p>
+									<p><?=$m->description?></p>
 									<ul>
 										<li>Typi non habent qui claritatem insitam.</li>
 										<li>Est usus legentis in iis qui facit eorum claritatem.</li>

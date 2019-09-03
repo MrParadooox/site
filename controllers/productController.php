@@ -19,7 +19,8 @@
         public function productAction(){
             $model= productModel::selectById($_GET);
             $modelPhoto=productModel::getFhoto($model);
-            $this->render("views/product/product.php", ['layot'=>True, 'model'=>$model, 'get'=>$_GET, 'modelPhoto'=>$modelPhoto]);
+            $category = productModel::categorryAll();
+            $this->render("views/product/product.php", ['layot'=>True, 'model'=>$model, 'get'=>$_GET, 'modelPhoto'=>$modelPhoto, 'category'=>$category]);
         }
         public function selectIdyAction(){
             // $this->render("views/product/product.php", ['layot'=>True, 'model'=>$_GET]);

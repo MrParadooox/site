@@ -1,3 +1,6 @@
+<?php
+var_dump($category);
+?>
 <div class="page-large-title">
 		<div class="container">
 			<h1 class="title">Shop Three Column With Right Sidebar</h1>
@@ -127,7 +130,7 @@
 												foreach($modelPhoto as $photo ){
 													if (($photo['productId'] == $m->id) && ($photo['position']==0)){
 												?>
-								<a href="#"><img src="<?=$photo['url'] ?>" alt="">
+								<a href="/product/product?id=<?=$m->id?>"><img src="<?=$photo['url'] ?>" alt="">
 								<?php
 											}
 												}
