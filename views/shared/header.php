@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/styles/style.min.css">
 </head>
 
-<body>
+<body id="body">
 <div class="menumobile-navbar-wrapper">
 	<nav class="menu-navbar menumobile-navbar js__menu_mobile">
 		<div class="menumobile-close-btn js__menu_close">

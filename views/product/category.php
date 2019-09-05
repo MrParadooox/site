@@ -28,7 +28,7 @@ var_dump($category);
 				<?php
 					foreach ($category as $c) {
 				?>
-                    <li><a href="category?<?=$c['url']?>&id=<?=$c['id']?>"><?=$c['name']?></a> (999)</li>
+                    <li><a href="category/index?<?=$c['url']?>&id=<?=$c['id']?>"><?=$c['name']?></a> (999)</li>
 					<?
 					}
 					?>
@@ -142,7 +142,7 @@ var_dump($category);
 								<ul class="controls">
 									<li><a href="#"><i class="fa fa-heart"></i><span>LIKE IT</span></a></li>
 									<li><a href="#"><i class="fa fa-exchange"></i><span>COMPARE</span></a></li>
-									<li><a href="#" class="js__popup_open" data-target="#quickViewPopup"><i class="fa fa-arrows-alt"></i><span>QUICK VIEW</span></a></li>
+									<li class="quicviews" value="<?=$m->id?>"><a href="#" class="js__popup_open"data-target="#quickViewPopup"><i class="fa fa-arrows-alt"></i><span>QUICK VIEW</span></a></li>
 								</ul>
 								<a href="#" class="add_to_cart_button">Add to cart</a>
 							</div>
@@ -160,8 +160,11 @@ var_dump($category);
 					</div><!-- product -->
 					<?php
 							}
+						}
 						?>
+<script>
 
+</script>
 					
 				</div><!-- products -->
 				<a href="#" class="btn-ajax-loading"><i class="fa fa-refresh"></i> <span>View more (2.450 products) ...</span></a>

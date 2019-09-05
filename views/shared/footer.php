@@ -121,7 +121,7 @@
 			<div class="popup-inside">
 				<div class="row">
 					<div class="col-md-12 clearfix">
-						<h2 class="single-title-border-bottom">Quick view</h2>
+						<h2 class="single-title-border-bottom" id="Text">Quick view</h2>
 					</div><!-- col -->
 					<div class="col-md-5">
 						<div class="product-detail">
@@ -239,5 +239,7 @@
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD84ST3FIRNNVS1CEm_IE9KoR-lAIw8OPo" type="text/javascript"></script>
 	<script src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/scripts/main.min.js"></script>
 	<script type="text/javascript" src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/plugin/rev/js/jquery.revolution.min.js"></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+	<script src="http://<?= $_SERVER['HTTP_HOST'] ?>/views/product/script.js"></script>
 </body>
 </html>
