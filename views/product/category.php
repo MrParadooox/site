@@ -25,14 +25,13 @@ var_dump($category);
                 <h2 class="widget-title section-title">Categories</h2>
                 <div class="clear"></div>
                 <ul>
-                    <li><a href="#">All</a> (999)</li>
-                    <li><a href="#">Accessories</a> (216)</li>
-                    <li><a href="#">Shorts</a> (312)</li>
-                    <li><a href="#">Dress</a> (157)</li>
-                    <li><a href="#">Shoes</a> (101)</li>
-                    <li><a href="#">Clothes</a> (98)</li>
-                    <li><a href="#">New collection</a> (76)</li>
-                    <li><a href="#">T-shirt</a> (39)</li>
+				<?php
+					foreach ($category as $c) {
+				?>
+                    <li><a href="category?<?=$c['url']?>&id=<?=$c['id']?>"><?=$c['name']?></a> (999)</li>
+					<?
+					}
+					?>
                 </ul>
             </aside><!-- .widget_categories -->
             
