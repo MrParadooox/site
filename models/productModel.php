@@ -4,6 +4,13 @@
     use models\baseModel;
     use \PDO;
 
+    if($_SERVER["REQUEST_METHOD"]=="POST"){
+        $array=[];
+        array_push($array, $_POST['id']);
+        return json_encode($array);
+    };
+
+
     class productModel extends baseModel{
         const tableName='product';
         const tableNamePhoto = 'productImg';

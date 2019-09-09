@@ -160,7 +160,7 @@ var_dump($category);
 					</div><!-- product -->
 					<?php
 							}
-						}
+						
 						?>
 <script>
 
