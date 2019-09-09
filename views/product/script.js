@@ -1,35 +1,35 @@
 $(function(){
-    var li_quicviews=[];
-    li_quicviews=$(".js__popup_open");
-    var length_li_quicviews=li_quicviews.length;
-    for (i=0; i<length_li_quicviews; i++){
-        atachment(li_quicviews[i]);
-    }
+
+    $(".js__popup_open").click(function(){
+        let id = $(this).attr('data-id');
+        $.get("/product/getProduct?id="+id,
+        function ($data){
+           var product= JSON.parse($data);
+           $('#Text').text(product.Name);
+           $('#pricepop').empty();
+           $('#pricepop').append(`<span class="amount">${product.price}</span>`);
+           $('.description').empty();
+           $(".description").append(`<p>${product.description}</p>`);
+               $('#origin').empty();
+               $("#origin").append(`<div class="thumbnails" id="photo">
+               </div>`);
+           product.fotos.forEach(function(e) {
+            if(e.position==0){
+                $("#origin").append(
+                    `<a href="#" class="woocommerce-main-image zoom js__zoom_popup" data-target="#zoomPopup" data-zoom="${e.url}">
+                    <img src="${e.url}" alt="" />`
+                    );
+                    $("#photo").append(
+                        `<a href="#" class="zoom js__thumb  js__active" data-images="${e.url}" data-zoom="${e.url}" ><img src="${e.url}" alt="" /></a>`
+                        ); 
+            } else{
+                $("#photo").append(
+                `<a href="#" class="zoom js__thumb" data-images="${e.url}" data-zoom="${e.url}" ><img src="${e.url}" alt="" /></a>`
+                ); 
+            }
+           
+          });
+       });
+    });
+  
 });
-
-function atachment(li_quicviews) {
-    li_quicviews.onclick=function(){
-        var el=li_quicviews.parentElement;
-        $.post("/" , {
-            id : '1'    
-        }, function ($data){
-            var product= JSON.parse($data);
-            $('#Text').text(product);
-        });
-        // $('#Text').text(el.value);
-    };
-}
-
-
-// function atachment(li_quicviews) {
-//     li_quicviews.onclick=function(){
-//         var el=li_quicviews.parentElement;
-//         $.post("http://magazin/models/productModel.php" , {
-//             id : '123'    
-//         }, function ($data){
-//             var product= JSON.parse($data);
-//             $('#Text').text(product[0]);
-//         });
-//         // $('#Text').text(el.value);
-//     };
-// }

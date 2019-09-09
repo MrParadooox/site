@@ -126,22 +126,12 @@
 					<div class="col-md-5">
 						<div class="product-detail">
 							<div class="product">
-								<div class="images js__gallery">
-									<a href="#" class="woocommerce-main-image zoom js__zoom_popup" data-target="#zoomPopup" data-zoom="http://placehold.it/385x530">
-										<img src="http://placehold.it/327x452" alt="" />
+								<div class="images js__gallery" id='origin'>
+									
 									</a><!-- .woocommerce-main-image -->
-									<div class="thumbnails">
-										<a href="#" class="zoom js__thumb" data-images="http://placehold.it/327x452" data-zoom="http://placehold.it/495x610" ><img src="http://placehold.it/76x97" alt="" /></a>
-										<a href="#" class="zoom js__thumb" data-images="http://placehold.it/327x452" data-zoom="http://placehold.it/470x640" ><img src="http://placehold.it/76x97" alt="" /></a>
-										<a href="#" class="zoom js__thumb js__active" data-images="http://placehold.it/327x452" data-zoom="http://placehold.it/385x530" ><img src="http://placehold.it/76x97" alt="" /></a>
-										<a href="#" class="zoom js__thumb" data-images="http://placehold.it/327x452" data-zoom="http://placehold.it/448x427" ><img src="http://placehold.it/76x97" alt="" /></a>
+									<div class="thumbnails" id="photo">
 									</div><!-- .thumbnails -->
-									<div class="hidden">
-										<img src="http://placehold.it/327x452" alt="" />
-										<img src="http://placehold.it/327x452" alt="" />
-										<img src="http://placehold.it/327x452" alt="" />
-										<img src="http://placehold.it/327x452" alt="" />
-									</div><!-- load images zone -->
+									
 								</div><!-- .images -->
 							</div><!-- .product -->
 						</div><!-- .product-detail -->
@@ -155,30 +145,15 @@
 								</div>
 								<a href="#">Have 25 reviews</a> <span>/</span> <a href="#">Add your review</a>
 							</div>
-							<p class="price"><span class="amount">$49</span></p>
+							<p class="price" id='pricepop'></p>
 							<ul class="product_meta">
 								<li><span>Brand:</span> Louis Vuitton</li>
 								<li><span>Available:</span> In stock</li>
 								<li><span>Product code:</span> ABC 123 456</li>
 							</ul>
 							<div class="description">
-								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismo tincidunt ut laoreet dolore magna aliquam erat volutpat, feugiat nulla facilisis vero eros accumsan et iusto.</p>
 							</div>
-							<ul class="variants">
-								<li class="variant-size">
-									<span class="text">Size</span>
-									<label class="lbl-variant"><input type="radio" name="radio-size" class="lbl-radio"><span class="lbl-text">S</span></label>
-									<label class="lbl-variant"><input checked type="radio" name="radio-size" class="lbl-radio"><span class="lbl-text">M</span></label>
-									<label class="lbl-variant"><input type="radio" name="radio-size" class="lbl-radio"><span class="lbl-text">L</span></label>
-								</li>
-								<li class="variant-color">
-									<span class="text">Colors</span>
-									<label class="lbl-variant"><input type="radio" name="radio-color" class="lbl-radio"><span class="lbl-text js__background_color" data-background-color="#fea500"></span></label>
-									<label class="lbl-variant"><input type="radio" name="radio-color" class="lbl-radio"><span class="lbl-text js__background_color" data-background-color="#9fbedb"></span></label>
-									<label class="lbl-variant"><input type="radio" name="radio-color" class="lbl-radio"><span class="lbl-text js__background_color" data-background-color="#f3db06"></span></label>
-									<label class="lbl-variant"><input type="radio" name="radio-color" class="lbl-radio"><span class="lbl-text js__background_color" data-background-color="#00b261"></span></label>
-								</li>
-							</ul>
+							
 							<form class="cart">
 								<div class="quantity js__number"><input type="number" class="js__target" value="1" /><button type="button" class="js__plus fa-plus fa"></button><button type="button" class="js__minus fa-minus fa"></button></div>
 								<button type="submit" class="single_add_to_cart_button">Add to cart</button>

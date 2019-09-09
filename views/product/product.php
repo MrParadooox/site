@@ -1,5 +1,4 @@
-
-					<?php
+<?php
 					foreach($model as $m){
 					}
 					?>
@@ -23,7 +22,7 @@
 								<div class="images js__gallery">
 									<a href="#" class="woocommerce-main-image zoom js__zoom_popup" data-target="#zoomPopup" data-zoom="http://placehold.it/385x530">
 									<?php
-									foreach($modelPhoto as $photo ){
+									foreach($model->fotos as $photo ){
 										if($photo['position']==0){
 											?>
 										<img src="<?=$photo['url']?>" alt="" />

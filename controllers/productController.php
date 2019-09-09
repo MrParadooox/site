@@ -9,9 +9,17 @@
 
         public function productAction(){
             $model= productModel::selectById($_GET);
-            $modelPhoto=productModel::getFhoto($model);
+            // $modelPhoto=productModel::getFhoto($model);
             $this->render("views/product/product.php", ['layot'=>True, 'model'=>$model, 'get'=>$_GET, 'modelPhoto'=>$modelPhoto]);
         }
+
+        public function getProductAction(){
+            $model= productModel::selectById($_GET);
+            // $modelPhoto=productModel::getFhoto($model);
+            // $this->render("views/product/product.php", ['layot'=>True, 'model'=>$model, 'get'=>$_GET, 'modelPhoto'=>$modelPhoto]);
+            echo json_encode($model);
+        }
+
         public function selectIdyAction(){
             // $this->render("views/product/product.php", ['layot'=>True, 'model'=>$_GET]);
         }
