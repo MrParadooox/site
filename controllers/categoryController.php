@@ -16,15 +16,24 @@
                 // $modelPhoto=categoryModel::getFhoto($model);
                 $category = categoryModel::categorryAll();
                 $this->render("views/product/category.php", ['layot'=>True, 'model'=>$model, 'category'=>$category]);
-                }else{
-                $model= productModel::selectAll(0,5);
-                // $modelPhoto=categoryModel::getFhoto($model);
-                $brand = brandModel::brandAll();
-                $category = categoryModel::categorryAll();
-                $this->render("views/product/category.php", ['layot'=>True, 'model'=>$model, 'category'=>$category, 'brand'=>$brand]);
+                
+                }
+                else{
+                    $model= productModel::selectAll(0 , 3);
+                    // $modelPhoto=categoryModel::getFhoto($model);
+                    $brand = brandModel::brandAll();
+                    $category = categoryModel::categorryAll();
+                    $this->render("views/product/category.php", ['layot'=>True, 'model'=>$model, 'category'=>$category, 'brand'=>$brand]);
                 }
 
             }
             
         }
+        public function ajaxAction(){
+            $start=$_GET['start'];
+            $end=$_GET["end"];
+            $model= productModel::selectAll((int)$start , (int)$end);
+            echo json_encode($model);
+        }
+
     }

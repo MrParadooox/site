@@ -216,5 +216,6 @@
 	<script type="text/javascript" src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/plugin/rev/js/jquery.revolution.min.js"></script>
 	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
 	<script src="http://<?= $_SERVER['HTTP_HOST'] ?>/views/product/script.js"></script>
+	<script src="http://<?= $_SERVER['HTTP_HOST'] ?>/views/product/ajax.js"></script>
 </body>
 </html>
