@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: localhost
--- Время создания: Авг 29 2019 г., 02:47
+-- Время создания: Сен 10 2019 г., 03:09
 -- Версия сервера: 5.6.37
 -- Версия PHP: 5.6.31
 
@@ -83,6 +83,13 @@ CREATE TABLE `brand` (
   `img` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Дамп данных таблицы `brand`
+--
+
+INSERT INTO `brand` (`id`, `name`, `description`, `img`) VALUES
+(0, 'Apple', 'Тут типа мальенькое описание бренда', 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/170px-Apple_logo_black.svg.png');
+
 -- --------------------------------------------------------
 
 --
@@ -103,7 +110,8 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`id`, `name`, `description`, `position`, `img`, `url`) VALUES
-(0, 'Мужская обувь', 'Описание мужской обуви тут длинное', 0, 'https://i.siteapi.org/ENCgFMTva2VAkjcmwD6bHjrwmPo=/fit-in/1024x768/center/top/filters:quality(95)/8ac89d6f7eb30c1.ru.s.siteapi.org/img/e6jxugj6kq0oos04o4gk4s0ckkcsw4', 'muzskaya-obuv');
+(0, 'Мужская обувь', 'Описание мужской обуви тут длинное', 0, 'https://i.siteapi.org/ENCgFMTva2VAkjcmwD6bHjrwmPo=/fit-in/1024x768/center/top/filters:quality(95)/8ac89d6f7eb30c1.ru.s.siteapi.org/img/e6jxugj6kq0oos04o4gk4s0ckkcsw4', 'muzskaya-obuv'),
+(1, 'Ботинки мужские', 'описание тут и т д іваівоа', 0, '1', 'botinki');
 
 -- --------------------------------------------------------
 
@@ -137,6 +145,13 @@ CREATE TABLE `delivery` (
   `description` text,
   `img` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `delivery`
+--
+
+INSERT INTO `delivery` (`id`, `name`, `description`, `img`) VALUES
+(1, 'Новая Почта', 'Переведено с английского языка.-Новая Почта - частная украинская почтовая и курьерская компания, которая осуществляет экспресс-доставку документов, грузов и посылок для частных лиц и предприятий. В 2017 году компания доставила более 145 миллионов грузов через 2300 филиалов компании по всей стране.', 'https://file.liga.net/images/general/2018/04/10/20180410122220-2718.jpg');
 
 -- --------------------------------------------------------
 
@@ -177,17 +192,18 @@ CREATE TABLE `product` (
   `description` text,
   `count` mediumint(9) DEFAULT NULL,
   `brandId` int(11) NOT NULL,
-  `price` mediumint(9) DEFAULT NULL
+  `price` mediumint(9) DEFAULT NULL,
+  `categoryId` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `product`
 --
 
-INSERT INTO `product` (`id`, `Name`, `smallDesc`, `description`, `count`, `brandId`, `price`) VALUES
-(1, 'Мужские осенние кроссовки', 'По умолчанию указана оптовая цена за одну пару. При выборе оптовой цены получите расчет за упаковку, то есть 8 пар.', 'Новые стильные и удобные кроссовки Т51 станут настоящей находкой для любителей качественной мужской обуви, а также принесут комфорт в вашу жизнь и сделают каждый шаг более удобным.', 100, 0, 1080),
-(2, 'Мужские осенние кроссовки', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismo tincidunt ut laoreet dolore magna aliquam erat volutpat, feugiat nulla facilisis vero eros accumsan et iusto.', 'Новые стильные и удобные кроссовки Т51 станут настоящей находкой для любителей качественной мужской обуви, а также принесут комфорт в вашу жизнь и сделают каждый шаг более удобным.', 100, 0, 1080),
-(3, 'Мужские осенние кроссовки', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismo tincidunt ut laoreet dolore magna aliquam erat volutpat, feugiat nulla facilisis vero eros accumsan et iusto.', 'Новые стильные и удобные кроссовки Т51 станут настоящей находкой для любителей качественной мужской обуви, а также принесут комфорт в вашу жизнь и сделают каждый шаг более удобным.', 100, 0, 1080);
+INSERT INTO `product` (`id`, `Name`, `smallDesc`, `description`, `count`, `brandId`, `price`, `categoryId`) VALUES
+(1, 'Мужские осенние кроссовки 1', 'По умолчанию указана оптовая цена за одну пару. При выборе оптовой цены получите расчет за упаковку, то есть 8 пар.', 'Новые стильные и удобные кроссовки Т51 станут настоящей находкой для любителей качественной мужской обуви, а также принесут комфорт в вашу жизнь и сделают каждый шаг более удобным.', 100, 0, 1080, 0),
+(2, 'Мужские осенние кроссовки 2', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismo tincidunt ut laoreet dolore magna aliquam erat volutpat, feugiat nulla facilisis vero eros accumsan et iusto.', 'Новые стильные и удобные кроссовки Т51 станут настоящей находкой для любителей качественной мужской обуви, а также принесут комфорт в вашу жизнь и сделают каждый шаг более удобным.', 100, 0, 1080, 0),
+(3, 'Мужские осенние кроссовки 3', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismo tincidunt ut laoreet dolore magna aliquam erat volutpat, feugiat nulla facilisis vero eros accumsan et iusto.', 'Новые стильные и удобные кроссовки Т51 станут настоящей находкой для любителей качественной мужской обуви, а также принесут комфорт в вашу жизнь и сделают каждый шаг более удобным.', 100, 0, 1080, 1);
 
 -- --------------------------------------------------------
 
@@ -329,7 +345,8 @@ ALTER TABLE `orders`
 -- Индексы таблицы `product`
 --
 ALTER TABLE `product`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `categoryId` (`categoryId`);
 
 --
 -- Индексы таблицы `productDelivery`
@@ -378,7 +395,7 @@ ALTER TABLE `blogCategoryPage`
 -- AUTO_INCREMENT для таблицы `delivery`
 --
 ALTER TABLE `delivery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT для таблицы `orders`
@@ -434,6 +451,12 @@ ALTER TABLE `categoryProduct`
 --
 ALTER TABLE `orders`
   ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`customerId`) REFERENCES `user` (`id`);
+
+--
+-- Ограничения внешнего ключа таблицы `product`
+--
+ALTER TABLE `product`
+  ADD CONSTRAINT `product_ibfk_1` FOREIGN KEY (`categoryId`) REFERENCES `category` (`id`);
 
 --
 -- Ограничения внешнего ключа таблицы `productDelivery`
