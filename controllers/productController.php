@@ -15,8 +15,6 @@
 
         public function getProductAction(){
             $model= productModel::selectById($_GET);
-            // $modelPhoto=productModel::getFhoto($model);
-            // $this->render("views/product/product.php", ['layot'=>True, 'model'=>$model, 'get'=>$_GET, 'modelPhoto'=>$modelPhoto]);
             echo json_encode($model);
         }
 

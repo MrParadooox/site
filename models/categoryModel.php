@@ -9,7 +9,7 @@
         const tableNameCategory='category';
         const tableNamePhoto = 'productImg';
         public function rules(){
-            return ["id", "Name", "smallDesc", "description", "count", "brandId", "price"];
+            return ["id", "Name", "smallDesc", "description", "count", "brandId", "price", "categoryId"];
             
         }
         public static function selectAll(){
@@ -38,12 +38,13 @@
             }
         }
 
-        public static function selectCategory(){
+        public static function selectCategory($id){
             try
             {
                 $conn = new PDO("mysql:host=".self::ServerName.";dbname=".self::DBName, self::UserName, self::Password);
                 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                $stmt = $conn->prepare("SELECT * FROM `".self::tableName."`");
+                $stmt = $conn->prepare("SELECT * FROM `".self::tableName."` WHERE categoryId=:id");
+                $stmt->bindParam(':id',$id);
                 $stmt->execute();
                 $tovarArray=[];
                 foreach ($stmt as $row)

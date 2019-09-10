@@ -8,7 +8,7 @@
         const tableName='product';
         const tableNamePhoto = 'productImg';
         public function rules(){
-            return ["id", "Name", "smallDesc", "description", "count", "brandId", "price"];
+            return ["id", "Name", "smallDesc", "description", "count", "brandId", "price", "categoryId"];
             
         }
 

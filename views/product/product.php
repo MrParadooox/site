@@ -1,6 +1,5 @@
 <?php
-					foreach($model as $m){
-					}
+var_dump($model);
 					?>
 
 <div class="page-large-title">
@@ -28,7 +27,7 @@
 										<img src="<?=$photo['url']?>" alt="" />
 									</a><!-- .woocommerce-main-image -->
 									<div class="thumbnails">
-									<a href="#" class="zoom js__thumb" data-images="<?=$photo['url']?>" data-zoom="<?=$photo['url']?>" ><img src="<?=$photo['url']?>" alt="" /></a>
+									<a href="#" class="zoom js__thumb js__active" data-images="<?=$photo['url']?>" data-zoom="<?=$photo['url']?>" ><img src="<?=$photo['url']?>" alt="" /></a>
 										<?php
 								} else {
 									?>
@@ -60,14 +59,14 @@
 								</div>
 								<a href="#">Have 25 reviews</a> <span>/</span> <a href="#">Add your review</a>
 							</div>
-							<p class="price"><span class="amount">$<?=$m->price?></span></p>
+							<p class="price"><span class="amount">$<?=$model->price?></span></p>
 							<ul class="product_meta">
-								<li><span>Brand:</span> <?=$m->price?></li>
+								<li><span>Brand:</span> <?=$model->price?></li>
 								<li><span>Available:</span> In stock</li>
 								<li><span>Product code:</span> ABC 123 456</li>
 							</ul>
 							<div class="description">
-								<p><?=$m->smallDesc?></p>
+								<p><?=$model->smallDesc?></p>
 							</div>
 							<ul class="variants">
 								<li class="variant-size">
@@ -103,7 +102,7 @@
 							</ul>
 							<div class="panel entry-content js__tab_content js__active">
 								<div class="text-content">
-									<p><?=$m->description?></p>
+									<p><?=$model->description?></p>
 									<ul>
 										<li>Typi non habent qui claritatem insitam.</li>
 										<li>Est usus legentis in iis qui facit eorum claritatem.</li>

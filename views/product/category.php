@@ -1,5 +1,5 @@
 <?php
-var_dump($category);
+var_dump($model);
 ?>
 <div class="page-large-title">
 		<div class="container">
@@ -28,7 +28,7 @@ var_dump($category);
 				<?php
 					foreach ($category as $c) {
 				?>
-                    <li><a href="category/index?<?=$c['url']?>&id=<?=$c['id']?>"><?=$c['name']?></a> (999)</li>
+                    <li><a href="/category/index?id=<?=$c['id']?>"><?=$c['name']?></a> (999)</li>
 					<?
 					}
 					?>
