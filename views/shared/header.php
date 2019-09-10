@@ -21,7 +21,7 @@
 			<ul class="menu">
 				<li class="current-menu-item menu-item-has-children"><a href="index.html">Home</a>
 					<ul class="sub-menu">
-						<li><a href="index.html">Home version 1</a></li>
+						<li><a href="http://<?= $_SERVER['HTTP_HOST'] ?>">Home version 1</a></li>
 						<li><a href="index-2.html">Home version 2</a></li>
 						<li><a href="index-3.html">Home version 3</a></li>
 						<li><a href="index-4.html">Home version 4</a></li>
@@ -187,7 +187,7 @@
 <div class="mobile-sticky js__menu_sticky">
 	<div class="container">
 		<div class="left-side">
-			<a href="index.html" class="logo"><img src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/images/logo.png" alt=""></a>
+			<a href="http://<?= $_SERVER['HTTP_HOST'] ?>" class="logo"><img src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/images/logo.png" alt=""></a>
 		</div>
 		<div class="right-side">
 			<button type="button" class="menumobile-toggle js__menu_toggle">
@@ -244,7 +244,7 @@
 		</div><!--/.top -->
 		<div class="container">
 			<div class="middle">
-				<a href="index.html" class="logo"><img src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/images/logo.png" alt=""></a>
+				<a href="http://<?= $_SERVER['HTTP_HOST'] ?>" class="logo"><img src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/images/logo.png" alt=""></a>
 				<form action="#" class="search-form">
 					<div class="select-category">
 						<select class="js__select2" data-min-results="Infinity">

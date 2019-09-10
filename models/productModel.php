@@ -9,7 +9,36 @@
         const tableNamePhoto = 'productImg';
         public function rules(){
             return ["id", "Name", "smallDesc", "description", "count", "brandId", "price", "categoryId"];
-            
+        }
+
+        public static function selectAll($start=0, $end=3){
+            try
+            {
+                $conn = new PDO("mysql:host=".self::ServerName.";dbname=".self::DBName, self::UserName, self::Password);
+                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                $stmt = $conn->prepare("SELECT * FROM `".self::tableName."` LIMIT :start, :end");
+                $stmt->bindParam(':start', $start, PDO::PARAM_INT);
+                $stmt->bindParam(':end', $end, PDO::PARAM_INT);
+                $stmt->execute();
+                $tovarArray=[];
+                foreach ($stmt as $row)
+                {
+                    $tovar = new productModel ;
+                    $tovar->tryMap($row);
+                    $fotos =productModel::getFhoto($tovar);
+                    $tovar->fotos=$fotos;
+                    array_push ($tovarArray, $tovar);
+                }
+            }
+            catch(PDOException $e)
+            {
+            echo "Connection failed: " . $e->getMessage();
+            }
+            finally {
+                $conn=null;
+                
+                return $tovarArray;
+            }
         }
 
         public static function selectById($get){
@@ -34,6 +63,35 @@
                 $conn=null;
                 
                 return $tovar;
+            }
+        }
+
+        public static function selectByIdCategory($id){
+            try
+            {
+                $conn = new PDO("mysql:host=".self::ServerName.";dbname=".self::DBName, self::UserName, self::Password);
+                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                $stmt = $conn->prepare("SELECT * FROM `".self::tableName."` WHERE categoryId=:id");
+                $stmt->bindParam(':id',$id);
+                $stmt->execute();
+                $tovarArray=[];
+                foreach ($stmt as $row)
+                {
+                    $tovar = new categoryModel;
+                    $tovar->tryMap($row);
+                    $fotos =productModel::getFhoto($tovar);
+                    $tovar->fotos=$fotos;
+                    array_push ($tovarArray, $tovar);
+                }
+            }
+            catch(PDOException $e)
+            {
+            echo "Connection failed: " . $e->getMessage();
+            }
+            finally {
+                $conn=null;
+                
+                return $tovarArray;
             }
         }
 

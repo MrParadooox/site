@@ -4,25 +4,26 @@
     use models\baseModel;
     use \PDO;
 
-    class categoryModel extends baseModel{
-        const tableNameCategory='category';
+    class brandModel extends baseModel{
+        const tableName='brand';
         public function rules(){
-            return ["id", "name", "description", "position", "img", "url"];
-            
+            return ["id", "name", "description", "img"];
+           
         }
 
-        public static function categorryAll(){
+        
+        public static function brandAll(){
             try
             {
                 $conn = new PDO("mysql:host=".self::ServerName.";dbname=".self::DBName, self::UserName, self::Password);
                 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                $categoryArray=[];
-                    $stmt = $conn->prepare("SELECT * FROM `".self::tableNameCategory."`");
+                $brandArray=[];
+                    $stmt = $conn->prepare("SELECT * FROM `".self::tableName."`");
                     $stmt->execute();
                     foreach ($stmt as $row) {
-                        $category = new categoryModel;
-                        $category->tryMap($row);
-                        array_push ($categoryArray, $category);
+                        $brand = new brandModel;
+                        $brand->tryMap($row);
+                        array_push ($brandArray, $brand);
                     }                    
             }
             catch(PDOException $e)
@@ -31,8 +32,9 @@
             }
             finally {
                 $conn=null;
-                return $categoryArray;
+                return $brandArray;
             }
         }
 
     }
+        

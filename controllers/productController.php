@@ -10,7 +10,7 @@
         public function productAction(){
             $model= productModel::selectById($_GET);
             // $modelPhoto=productModel::getFhoto($model);
-            $this->render("views/product/product.php", ['layot'=>True, 'model'=>$model, 'get'=>$_GET, 'modelPhoto'=>$modelPhoto]);
+            $this->render("views/product/product.php", ['layot'=>True, 'model'=>$model, 'get'=>$_GET]);
         }
 
         public function getProductAction(){

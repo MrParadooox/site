@@ -1,5 +1,6 @@
 <?php
-var_dump($model);
+
+var_dump($brand);
 ?>
 <div class="page-large-title">
 		<div class="container">
@@ -28,8 +29,8 @@ var_dump($model);
 				<?php
 					foreach ($category as $c) {
 				?>
-                    <li><a href="/category/index?id=<?=$c['id']?>"><?=$c['name']?></a> (999)</li>
-					<?
+                    <li><a href="/category/index?id=<?=$c->id?>"><?=$c->name?></a> (999)</li>
+					<?php
 					}
 					?>
                 </ul>
@@ -69,14 +70,16 @@ var_dump($model);
                 <h2 class="widget-title section-title">Select a brand</h2>
                 <div class="clear"></div>
                 <ul>
-                    <li><a href="#">Adidas</a> (999)</li>
-                    <li><a href="#">Antony Morato</a> (216)</li>
-                    <li><a href="#">Armani jeans</a> (312)</li>
-                    <li><a href="#">Boss</a> (157)</li>
-                    <li><a href="#">Boom Bap</a> (101)</li>
-                    <li><a href="#">Chanel</a> (98)</li>
-                    <li><a href="#">Gucci</a> (76)</li>
-                    <li><a href="#">Louis Vuitton</a> (39)</li>
+
+				<?php
+					foreach ($brand as $b) {
+				?>
+					<li><a href="/category/index?brandid=<?=$b->id?>"><?=$b->name?></a> (999)</li>
+					<?php
+					}
+					?>
+
+                    
                 </ul>
             </aside><!-- .widget_categories -->
             
@@ -126,7 +129,7 @@ var_dump($model);
 						<div class="product-grid">
 							<div class="thumb">
 											<?php
-												foreach($modelPhoto as $photo ){
+												foreach($m->fotos as $photo ){
 													if (($photo['productId'] == $m->id) && ($photo['position']==0)){
 												?>
 								<a href="/product/product?id=<?=$m->id?>"><img src="<?=$photo['url'] ?>" alt="">
@@ -147,7 +150,7 @@ var_dump($model);
 								<a href="#" class="add_to_cart_button">Add to cart</a>
 							</div>
 							<a href="#" class="content">
-								<h2 class="title"><?=$m->Name?></h2>
+								<h2 class="title"><?= $m->Name ?></h2>
 								<span class="category">Men</span>
 								<span class="price">
 								<span class="amount"><?=$m->id?></span>
@@ -160,7 +163,6 @@ var_dump($model);
 					</div><!-- product -->
 					<?php
 							}
-						
 						?>
 <script>
 
