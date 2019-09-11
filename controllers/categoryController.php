@@ -13,9 +13,9 @@
                 if (isset($_GET['id'])){
                 $id=$_GET['id'];
                 $model= productModel::selectByIdCategory($id);
-                // $modelPhoto=categoryModel::getFhoto($model);
+                $brand = brandModel::brandAll();
                 $category = categoryModel::categorryAll();
-                $this->render("views/product/category.php", ['layot'=>True, 'model'=>$model, 'category'=>$category]);
+                $this->render("views/product/category.php", ['layot'=>True, 'model'=>$model, 'category'=>$category, 'brand'=>$brand]);
                 
                 }
                 else{

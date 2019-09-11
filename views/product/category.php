@@ -120,7 +120,7 @@ var_dump($brand);
 						<li><a href="shop-three-column-with-right-sidebar.html" class="active"><img src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/images/icon-grid.png" alt="" /></a></li>
 					</ul><!-- .shop-type -->
 				</div><!-- .shop-filter -->
-				<div class="products row row-inline-block text-center">
+				<div class="products row row-inline-block text-center" id='produckts'>
 
 										<?php
 										foreach ($model as $m) {
@@ -169,7 +169,7 @@ var_dump($brand);
 </script>
 					
 				</div><!-- products -->
-				<a href="#" class="btn-ajax-loading"><i class="fa fa-refresh"></i> <span>View more (2.450 products) ...</span></a>
+				<a href="#" class="btn-ajax-loading" data-start='3' data-end='6'><i class="fa fa-refresh"></i> <span>View more (2.450 products) ...</span></a>
 			</div><!-- col -->
 			
 			<div class="col-xs-12 section-common section-last">
