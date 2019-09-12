@@ -169,7 +169,7 @@ var_dump($brand);
 </script>
 					
 				</div><!-- products -->
-				<a href="#" class="btn-ajax-loading" data-start='3' data-end='6'><i class="fa fa-refresh"></i> <span>View more (2.450 products) ...</span></a>
+				<a href="#" id="btn-ajax-product" class="btn-ajax-loading" data-start='3' data-end='6'><i class="fa fa-refresh"></i> <span>View more (2.450 products) ...</span></a>
 			</div><!-- col -->
 			
 			<div class="col-xs-12 section-common section-last">

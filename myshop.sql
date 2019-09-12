@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Хост: 127.0.0.1
--- Время создания: Сен 11 2019 г., 00:15
--- Версия сервера: 10.1.38-MariaDB
--- Версия PHP: 7.3.2
+-- Хост: localhost
+-- Время создания: Сен 12 2019 г., 02:59
+-- Версия сервера: 5.6.37
+-- Версия PHP: 5.6.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -31,8 +31,21 @@ SET time_zone = "+00:00";
 CREATE TABLE `answerreviews` (
   `reviewsId` int(11) NOT NULL,
   `userId` int(11) NOT NULL,
-  `description` text NOT NULL
+  `userName` varchar(255) NOT NULL,
+  `description` text NOT NULL,
+  `dataTime` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `answerreviews`
+--
+
+INSERT INTO `answerreviews` (`reviewsId`, `userId`, `userName`, `description`, `dataTime`) VALUES
+(1, 1, 'Roman', 'тест работы answerreviews', ''),
+(1, 1, 'Хуйнанейм', 'Тест ответов на коментарий', '12.09/2019'),
+(11, 1, 'Хуйнанейм', 'Тест ответов на коментарий', '12.09/2019'),
+(11, 1, 'Хуйнанейм22', 'Тест ответов на коментарий', '12.09/2019'),
+(1, 1, 'Хуйнанейм22', 'Тест ответов на коментарий', '12.09/2019');
 
 -- --------------------------------------------------------
 
@@ -282,10 +295,26 @@ INSERT INTO `productimg` (`productId`, `position`, `url`) VALUES
 
 CREATE TABLE `reviews` (
   `id` int(11) NOT NULL,
-  `userId` int(11) NOT NULL,
+  `userId` int(11) DEFAULT NULL,
+  `userName` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
   `productId` int(11) NOT NULL,
-  `description` text NOT NULL
+  `description` text NOT NULL,
+  `dataTime` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `reviews`
+--
+
+INSERT INTO `reviews` (`id`, `userId`, `userName`, `email`, `productId`, `description`, `dataTime`) VALUES
+(1, 1, 'Админ', '', 1, 'Vestibulum a nisl ipsum. Curabitur aliquet nec felis quis convallis. Quisque et auctor dui, id adipiscing nunc. Etiam et dui lobortis, volutpat justo ac, tempor lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus nisi, porttitor ac adipiscing ac, cursus eu massa.', '30.09.2019'),
+(11, 1, 'Admin', '', 1, 'dgfegg', '12323'),
+(37, 2, '345345', '345345@yandex.ru', 1, 'erererererer', '09.12.19'),
+(43, 2, 'Admin', 'Test@test.gmailc,om', 2, '234234234234234', '09.12.19'),
+(44, 2, '234234234', '234234234', 1, '234234234', '09.12.19'),
+(45, 2, '456456', '456456', 1, '456456', '09.12.19'),
+(46, 2, '345345', '345345@yandex.ru', 1, '3t34t34t', '09.12.19');
 
 -- --------------------------------------------------------
 
@@ -308,7 +337,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `login`, `Password`, `FirstName`, `LastName`, `Email`, `Phone`) VALUES
-(1, 'ppancor@yandex.ru', '0fc48559cefd281ceb91630b975f2397e5357255', 'roman', 'roman', 'ppancor@yandex.ru', '380677863280');
+(1, 'ppancor@yandex.ru', '0fc48559cefd281ceb91630b975f2397e5357255', 'roman', 'roman', 'ppancor@yandex.ru', '380677863280'),
+(2, 'Guest', '0fc48559cefd281ceb91630b975f2397e5357255', 'Guest', 'Guest', 'Guest@Guest.com', '380680203044');
 
 --
 -- Индексы сохранённых таблиц
@@ -400,8 +430,7 @@ ALTER TABLE `productimg`
 --
 ALTER TABLE `reviews`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `productId` (`productId`),
-  ADD KEY `userId` (`userId`);
+  ADD KEY `productId` (`productId`);
 
 --
 -- Индексы таблицы `user`
@@ -447,13 +476,13 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT для таблицы `reviews`
 --
 ALTER TABLE `reviews`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT для таблицы `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц
@@ -509,8 +538,7 @@ ALTER TABLE `productimg`
 -- Ограничения внешнего ключа таблицы `reviews`
 --
 ALTER TABLE `reviews`
-  ADD CONSTRAINT `reviews_ibfk_1` FOREIGN KEY (`productId`) REFERENCES `product` (`id`),
-  ADD CONSTRAINT `reviews_ibfk_2` FOREIGN KEY (`userId`) REFERENCES `user` (`id`);
+  ADD CONSTRAINT `reviews_ibfk_1` FOREIGN KEY (`productId`) REFERENCES `product` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,6 +1,6 @@
 
 $(function(){
-    $(".btn-ajax-loading").click(function(){
+    $("#btn-ajax-product").click(function(){
         event.preventDefault();
         let start = $('.product-grid').length;
         $.get("/category/ajax?start="+start+"&end="+3,

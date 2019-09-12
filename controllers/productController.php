@@ -2,6 +2,7 @@
     namespace controllers;
     use controllers\baseController;
     use models\productModel;
+    use models\reviewsModel;
 
     class productController extends baseController {
 
@@ -9,8 +10,9 @@
 
         public function productAction(){
             $model= productModel::selectById($_GET);
+            $reviews = reviewsModel::select($_GET['id']);
             // $modelPhoto=productModel::getFhoto($model);
-            $this->render("views/product/product.php", ['layot'=>True, 'model'=>$model, 'get'=>$_GET]);
+            $this->render("views/product/product.php", ['layot'=>True, 'model'=>$model, 'get'=>$_GET, 'reviews'=>$reviews]);
         }
 
         public function getProductAction(){
@@ -18,8 +20,10 @@
             echo json_encode($model);
         }
 
-        public function selectIdyAction(){
-            // $this->render("views/product/product.php", ['layot'=>True, 'model'=>$_GET]);
+        public function inserReviewsAction(){
+            
+            $model= reviewsModel::insert($_POST['name'], $_POST['email'], $_POST['productId'], $_POST['description']);
+            echo json_encode($model);
         }
 
 
