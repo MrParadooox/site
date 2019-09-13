@@ -3,6 +3,7 @@
     use controllers\baseController;
     use models\productModel;
     use models\reviewsModel;
+    use models\deliveryModel;
 
     class productController extends baseController {
 
@@ -11,8 +12,8 @@
         public function productAction(){
             $model= productModel::selectById($_GET);
             $reviews = reviewsModel::select($_GET['id']);
-            // $modelPhoto=productModel::getFhoto($model);
-            $this->render("views/product/product.php", ['layot'=>True, 'model'=>$model, 'get'=>$_GET, 'reviews'=>$reviews]);
+            $delivery=deliveryModel::deliveryAll();
+            $this->render("views/product/product.php", ['layot'=>True, 'model'=>$model, 'get'=>$_GET, 'reviews'=>$reviews, 'delivery'=>$delivery]);
         }
 
         public function getProductAction(){

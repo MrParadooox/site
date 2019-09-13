@@ -6,6 +6,22 @@
     class userController extends baseController {
 
         public function loginAction(){
+            if($_SERVER["REQUEST_METHOD"] == "POST")
+            {
+                $user = userModel::varification($_POST['Phone']);
+                $userPassword = new userModel;
+                $userPassword->Password=$_POST['Password'];
+                $password = $userPassword::HasherPassword();
+                if($password == $user->Password)
+                    {
+                        $this->autorizationAction($user->Email);
+                        $this->render('views/home/index.php', ['layout'=>True]);
+                    }
+                    else {
+                        $this->render("views/user/login.php", ['layot'=>True, 'model'=>$_GET, 'user'=>$password]);
+                    }
+                
+            }
             $this->render("views/user/login.php", ['layot'=>True, 'model'=>$_GET]);
         }
         public function registerAction(){
@@ -25,6 +41,13 @@
                     }
                 }
             }
+        }
+
+
+        public function autorizationAction($Email){
+            if (session_status()<>2) session_start();
+            $_SESSION["Autorization"] = TRUE;
+            $_SESSION["Email"] = $Email;
         }
 
     }

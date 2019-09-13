@@ -9,19 +9,20 @@
         const soult="qwerty dvcde";
         public function rules()
         {
-            return ["FirstName", "LastName","Email", "Phone", "login", "Password"];
+            return ["login", "Password", "FirstName", "LastName","Email", "Phone"];
         }
         
-        private function HasherPassword()
+        public static function HasherPassword()
         {
-            return sha1(self::soult.trim(htmlspecialchars($this->Password)).self::soult);
+            return sha1(self::soult.trim(htmlspecialchars(self::Password)).self::soult);
         }
 
-        public static function varification($Email){
+
+        public static function varification($Phone){
             $conn = new PDO("mysql:host=".self::ServerName.";dbname=".self::DBName, self::UserName, self::Password);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $stmt = $conn->prepare("SELECT * FROM `".self::tableName."` WHERE `Email`= :Email");
-            $stmt->bindParam(':Email', $Email);
+            $stmt = $conn->prepare("SELECT * FROM `".self::tableName."` WHERE `Phone`= :Phone");
+            $stmt->bindParam(':Phone', $Phone);
             $stmt->execute();
             $row = $stmt->fetch(PDO::FETCH_ASSOC);
             if($row)

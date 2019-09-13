@@ -1,6 +1,7 @@
 <?php
 // var_dump($reviews[1]->answerreviews[0]);
-// echo json_encode($reviews);
+// echo json_encode($delivery);
+// var_dump($delivery);
 					?>
 
 <div class="page-large-title">
@@ -118,41 +119,31 @@
 					<div class="woocommerce-tabs js__tab">
 						<ul class="tabs">
 							<li><a href="#" class="js__tab_control ">Description</a> </li>
-							<li><a href="#" class="js__tab_control">Free Shipping</a></li>
-							<li><a href="#" class="js__tab_control js__active">Reviews (0)</a></li>
+							<li><a href="#" class="js__tab_control js__active">Free Shipping</a></li>
+							<li><a href="#" class="js__tab_control">Reviews (0)</a></li>
 						</ul>
 						<div class="panel entry-content js__tab_content ">
 							<div class="text-content">
 								<p><?=$model->description?></p>
-								<ul>
-									<li>Typi non habent qui claritatem insitam.</li>
-									<li>Est usus legentis in iis qui facit eorum claritatem.</li>
-									<li>Investigationes demonstraverunt lectores.</li>
-									<li>Legere ut me lius quod qua legunt zzril delenit.</li>
-									<li>Augue duis dolore saepius delenit augue duis dolore.</li>
-								</ul>
-								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-									euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
-									minim veniam quis nostrud exerci tation, ullamcorper suscipit lobortis nisl ut
-									aliquip ex ea commodo consequat vulputate velit esse molestie consequat mirum est
-									notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum
-									formas humanitatis per seacula quarta decima quinta decima.</p>
-								<p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium
-									lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram,
-									anteposue rit litterarum formas humanitatis per seacula quarta decima et quinta
-									decima. </p>
-							</div>
-						</div>
-
-						<div class="panel entry-content js__tab_content">
-							<div class="text-content">
-								<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
-									adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
-									magnam aliquam quaerat voluptatem. </p>
+								
 							</div>
 						</div>
 
 						<div class="panel entry-content js__tab_content js__active">
+							<div class="text-content d-flex flex-row">
+							<?php
+							foreach($delivery as $d){
+								?>	
+							
+								<center><img src="<?=$d->img?>" alt="<?=$d->name?>" width="150px" height="150px" ></center>
+								<p ><?=$d->description?></p>
+								<?php
+							}
+							?>
+							</div>
+						</div>
+
+						<div class="panel entry-content js__tab_content">
 							<div id="comments" class="comments">
 								<h2 class="section-title">28 Comments</h2>
 								<div class="clear"></div>
