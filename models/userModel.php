@@ -9,7 +9,7 @@
         const soult="qwerty dvcde";
         public function rules()
         {
-            return ["login", "Password", "FirstName", "LastName","Email", "Phone"];
+            return ["login", "Password", "FirstName", "LastName","Email", "Phone", "sessionId"];
         }
         
         public static function HasherPassword()

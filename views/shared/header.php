@@ -1,3 +1,11 @@
+<?php
+    // if (!isset($_SESSION)) session_start();
+	if($_COOKIE['sessionId'] == '' || $_COOKIE['sessionId'] == NULL)
+        {
+            $sessionId = sha1(md5(microtime().'90CV2c10DF237dDFG2bfDF863c320FGDFbbKLe04e8c'.microtime()));
+            setcookie('sessionId',$sessionId,time() + (86400 * 30), '/',  $_SERVER['HTTP_HOST'], false);
+        }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

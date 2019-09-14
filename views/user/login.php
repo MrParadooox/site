@@ -8,9 +8,12 @@ var_dump($user);
 <?php
     // if (!isset($_SESSION)) session_start();
     echo sha1(md5(microtime().'90CV2c10DF237dDFG2bfDF863c320FGDFbbKLe04e8c'.microtime()));
-    echo 'Привет, '. ( $_COOKIE['my_name'] != '' ? $_COOKIE['my_name'] : 'Гость') . '!'; // Привет, Миша!
+    // echo 'Привет, '. ( $_COOKIE['my_name'] != '' ? $_COOKIE['my_name'] : 'Гость') . '!'; // Привет, Миша!
     print_r($_COOKIE);
 
+    var_dump($_SERVER["HTTP_USER_AGENT"]);
+    var_dump($_SERVER["REMOTE_ADDR"]);
+    var_dump($_SERVER['HTTP_X_FORWARDED_FOR']);
 ?>
 
   <div class="container">

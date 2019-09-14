@@ -147,7 +147,7 @@ var_dump($brand);
 									<li><a href="#"><i class="fa fa-exchange"></i><span>COMPARE</span></a></li>
 									<li class="quicviews" value="<?=$m->id?>"><a href="#" data-id='<?=$m->id?>' class="js__popup_open"data-target="#quickViewPopup"><i class="fa fa-arrows-alt"></i><span>QUICK VIEW</span></a></li>
 								</ul>
-								<a href="#" class="add_to_cart_button">Add to cart</a>
+								<a href="#"  data-id='<?=$m->id?>' class="add_to_cart_button">Add to cart</a>
 							</div>
 							<a href="#" class="content">
 								<h2 class="title"><?= $m->Name ?></h2>
