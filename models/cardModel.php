@@ -60,8 +60,11 @@
                 {
                     $card = new cardModel;
                     $card->tryMap($row);
+                    var_dump($card);
                     foreach($card as $c){
-                        $card->cardProduct=productModel::selectById($c->productId);
+                        var_dump($c);
+                        // $product = productModel::selectById($c->productId);
+                        // $card->cardProduct=$product;
                     }
                     array_push ($cardArray, $card);
                 }
@@ -73,7 +76,7 @@
             finally {
                 $conn=null;
                 
-                return $cardArray;
+                // return $cardArray;
             }
         }
 

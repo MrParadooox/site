@@ -10,7 +10,7 @@
         //  select All
 
         public function productAction(){
-            $model= productModel::selectById($_GET);
+            $model= productModel::selectById($_GET['id']);
             $reviews = reviewsModel::select($_GET['id']);
             $delivery=deliveryModel::deliveryAll();
             $this->render("views/product/product.php", ['layot'=>True, 'model'=>$model, 'get'=>$_GET, 'reviews'=>$reviews, 'delivery'=>$delivery]);

@@ -47,7 +47,7 @@
                 $conn = new PDO("mysql:host=".self::ServerName.";dbname=".self::DBName, self::UserName, self::Password);
                 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 $stmt = $conn->prepare("SELECT * FROM `".self::tableName."` WHERE id =:id");
-                $stmt->bindParam(':id', $get['id']);
+                $stmt->bindParam(':id', $get);
                 $stmt->execute();
                 $tovar = new productModel;
 
