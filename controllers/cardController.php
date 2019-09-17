@@ -17,7 +17,7 @@
                 $model= cardModel::selectAll($sessionId);
         
 
-                // var_dump($model);
+                var_dump($model);
                 // echo json_encode($model);
                 
                 }

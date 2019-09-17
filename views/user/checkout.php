@@ -62,11 +62,37 @@
 										</select>
 									</span>
 								</p>
+							</div>
+							
+							<div class="col-sm-12">
+								<p class="form-row form-row-input">
+									<label for="country">Город <span class="required">*</span></label>
+									<span class="select-common">
+										<select  name="country" id="gorod" class="js__select2" data-placeholder="Please Select">
+                                            <option value="" label="Country"></option>
+
+											
+										</select>
+									</span>
+								</p>
+							</div>
+							
+							<div class="col-sm-12">
+								<p class="form-row form-row-input">
+									<label for="country">Отделение <span class="required">*</span></label>
+									<span class="select-common">
+										<select  name="country" id="otdelenie" class="js__select2" data-placeholder="Please Select">
+                                            <option value="" label="Country"></option>
+
+											
+										</select>
+									</span>
+								</p>
                             </div>
 
                             <div class="col-sm-12">
 								<p class="form-row form-row-input">
-                                    <label for="country">Город <span class="required">*</span></label>
+                                    <label for="country">Город НП<span class="required">*</span></label>
                                     
                             <input class="input-text input-text-common" id='input-lists' list="browsers" name="browser">
                                 <datalist id="browsers">
@@ -77,7 +103,7 @@
 
 							<div class="col-sm-12">
 								<p class="form-row form-row-input">
-									<label for="country">Отделение <span class="required">*</span></label>
+									<label for="country">Отделение НП<span class="required">*</span></label>
 									<span class="select-common">
 										<select name="country" id="otdelenie" class="js__select2" data-placeholder="Please Select">
 											<option value="" label="Country"></option>
@@ -87,38 +113,7 @@
 								</p>
                             </div>
 
-							<div class="col-sm-12">
-								<p class="form-row form-row-input">
-									<label for="address">Address <span class="required">*</span></label>
-									<input class="input-text input-text-common" type="text" name="address" id="address">
-								</p>
-							</div>
-							<div class="col-sm-12">
-								<p class="form-row form-row-input">
-									<label for="city">Town / City <span class="required">*</span></label>
-									<span class="select-common">
-										<select name="city" id="city" class="js__select2" data-placeholder="Please Select">
-											<option value="" label="City"></option>
-											<option value="England">Ha Noi</option>
-											<option value="London">London</option>
-											<option value="New York">New York</option>
-											<option value="Tokyo">Tokyo</option>
-										</select>
-									</span>
-								</p>
-							</div>
-							<div class="col-sm-6">
-								<p class="form-row form-row-input">
-									<label for="state">State <span class="required">*</span></label>
-									<input class="input-text input-text-common" type="text" name="state" id="state">
-								</p>
-							</div>
-							<div class="col-sm-6">
-								<p class="form-row form-row-input">
-									<label for="zip-code">Zip / Postal Code <span class="required">*</span></label>
-									<input class="input-text input-text-common" type="text" name="zip-code" id="zip-code">
-								</p>
-							</div>
+							
 						</div><!-- .row -->
 					</div><!-- .woocommerce-billing-fields -->
 					<div class="woocommerce-shipping-fields js__toggle_slide">

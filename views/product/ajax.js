@@ -47,6 +47,7 @@ $(function(){
      </div>
  </div>`;
  $('#produckts').append(html);
+ 
             });
             console.log(product[0]);
         });

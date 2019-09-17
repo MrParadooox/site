@@ -1,20 +1,64 @@
 
 
-$( document ).ready(function() {
-    console.log( "document loaded" );
+$(function() {
+    let dataobl;
 
-    $("#place_order").click(function(){
-        let id = $(this).attr('data-id');
-        $.get("https://www.delivery-auto.com/api/v4/Public/GetRegionList?culture=ru-RU&country=1",
-        function ($data){
-            $.each($data.data, function(index, v) {
-                console.log(v);
-                $("#obl").append(`<option  value="${v.externalId}">${v.name}</option>`);
+      $('#delivery2').on('select2:select', function (e) {
+          if ($('#delivery2').val() == 'Деливери'){
+            //  var data = e.params.data;
+                deliveryObl();
+          }
+        
+        return
+    });
+
+    function deliveryObl(){
+        $('#obl').empty();
+        $.get(`https://www.delivery-auto.com/api/v4/Public/GetRegionList?culture=ru-RU&country=1`,
+        function ($r){
+            $.each($r.data, function(index, v) {
+                // console.log(v);
+                $("#obl").append(`<option  value="${v.id}">${v.name}</option>`);
             });
-            console.log($data);
+       });
+    };
+
+    // город
+    $('#obl').on('select2:select', function (e) {
+        $('#gorod').empty();
+        dataobl = e.params.data;
+        // console.log(dataobl);
+        // console.log(dataobl.id);
+        $.get(`https://www.delivery-auto.com/api/v4/Public/GetAreasList?culture=ru-RU&regionId=${dataobl.id}&country=1`,
+        function ($g){
+            $.each($g.data, function(index, v) {
+                // console.log(v);
+                    $("#gorod").append(`<option  value="${v.id}">${v.name}</option>`);
+            });
+            // console.log($data);
 
        });
+
     });
+
+
+    $('#gorod').on('select2:select', function (e) {
+        $('#otdelenie').empty();
+        var otdel = e.params.data;
+
+        $.get(`https://www.delivery-auto.com/api/v4/Public/GetWarehousesList?culture=ru-RU&CityId=${otdel.id}&RegionId=${dataobl.id}&country=1`,
+        function ($o){
+            $.each($o.data, function(index, v) {
+                console.log(v);
+                $("#otdelenie").append(`<option  value="${v.externalId}">${v.name}</option>`);
+            });
+
+       });
+
+    });
+
+
+
 
 });
 
