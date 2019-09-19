@@ -77,7 +77,7 @@
                 $tovarArray=[];
                 foreach ($stmt as $row)
                 {
-                    $tovar = new categoryModel;
+                    $tovar = new productModel;
                     $tovar->tryMap($row);
                     $fotos =productModel::getFhoto($tovar);
                     $tovar->fotos=$fotos;

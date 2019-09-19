@@ -220,6 +220,7 @@
 	<script src="http://<?= $_SERVER['HTTP_HOST'] ?>/views/product/ajax.js"></script>
 	<script src="http://<?= $_SERVER['HTTP_HOST'] ?>/views/product/reviews.js"></script>
 	<script src="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/scripts/cardAdd.js"></script>
+	<script src="http://<?= $_SERVER['HTTP_HOST'] ?>/views/product/cardshop.js"></script>
 	<script src="http://<?= $_SERVER['HTTP_HOST'] ?>/views/user/delivery.js"></script>
 </body>
 </html>
