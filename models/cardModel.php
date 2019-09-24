@@ -13,6 +13,20 @@
         }
 
 
+        public static function add($productId, $count){
+            try{
+                setcookie('sessionId',$sessionId,time() + (86400 * 30), '/',  $_SERVER['HTTP_HOST'], false);
+                +
+              
+                
+            }
+            finally {
+                return $h;
+                
+            }
+        }
+
+
 
         public static function add($productId, $sessionId){
             try{

@@ -17,7 +17,8 @@
         }
 
         public function getProductAction(){
-            $model= productModel::selectById($_GET);
+            $id = $_GET["id"];
+            $model= productModel::selectById($id);
             echo json_encode($model);
         }
 

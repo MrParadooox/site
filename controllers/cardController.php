@@ -2,6 +2,7 @@
     namespace controllers;
     use controllers\baseController;
     use models\cardModel;
+    use models\productModel;
 
     class cardController extends baseController {
 
@@ -24,6 +25,18 @@
 
             }
             
+        }
+
+        public function getProductAction(){
+            if ($_SERVER["REQUEST_METHOD"]=="GET")
+            {
+                if (isset($_GET['id'])){
+                $id=$_GET['id'];
+                $model= productModel::selectById($id);
+                echo json_encode($model);
+                }
+            }
+        
         }
 
     }

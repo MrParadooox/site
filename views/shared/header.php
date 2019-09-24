@@ -308,7 +308,7 @@
 								</ul><!--/.cart-list -->
 								<div class="cart-list-subtotal">
 									<strong class="txt fl">SubTotal:</strong>
-									<strong class="currency fr">$122.50</strong>
+								
 								</div><!--/.cart-list-subtotal -->
 							</div><!--/.cart-list-content -->
 							<a class="cart-list-bottom" href="checkout.html">
